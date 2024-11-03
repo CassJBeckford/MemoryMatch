@@ -21,8 +21,9 @@ button {
 }
 
 /*-------------------------- Colors */
+
 #menu-buttons button {
-    background-color: ;
+   
 }
 
 #menu-buttons button:hover {
@@ -31,6 +32,10 @@ button {
 
 #menu-buttons button:active {
    
+}
+
+h1 {
+
 }
 
 /*-------------------------- Menu */
