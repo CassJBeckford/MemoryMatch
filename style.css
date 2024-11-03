@@ -22,20 +22,30 @@ button {
 
 /*-------------------------- Colors */
 
+body {
+    background-color: #FFAFE2;
+}
+
 #menu-buttons button {
-   
+   background-color: #11005c;
+   color: #00fbff;
 }
 
 #menu-buttons button:hover {
-    
+    background-color: #00fbff;
+    color: #11005c;
+    transition: 0.3s;
+    border-style: solid;
+    border-color: #11005c;
 }
 
 #menu-buttons button:active {
-   
+    background-color: #11005c;
+    color: #00fbff;
 }
 
 h1 {
-
+    color: #11005c;
 }
 
 /*-------------------------- Menu */
