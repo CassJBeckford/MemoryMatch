@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <style> @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');</style>
     <title>Memory Match</title>
 </head>
 <body>
     <!-- Menu --> 
     <div id="menu-section">
-        <div id="front-page" class="visible">
+        <div id="front-page" class="">
             <div id="menu-title">
                 <h1 class="fugaz-one-regular game-name">MEMORY MATCH</h1>
             </div>
             <div id="menu-buttons">
-                <button id="play">START</button>
+                <button id="play" onclick="selectDifficulty()">START</button>
                 <br>
-                <button id="rules">HOW TO PLAY</button>
+                <button id="rules" onclick="makeRulesVisible()">HOW TO PLAY</button>
             </div>
         </div>
     <!-- How to play --> 
@@ -31,7 +31,61 @@
             </div>
         </div>
     <!-- Difficulty -->  
-        <div id="mode-selection" class="hidden"></div>
+        <div id="mode-selection" class="hidden">
+         
+                <div class="row difficultySelect">
+                  <div class="col">
+                    <div class="difficulty-box">
+                      <div class="difficulty-header">
+                      <h1> Easy </h1>
+                      </div>
+                        <hr>
+                        <p>Text</p>
+                        <p>Text</p>
+                        <p>Text</p>
+                        <p>Text</p>
+                        <hr>
+                      <div class="Enquire-1">
+                      <button>BUTTON</button>
+                      </div>
+                    </div>
+
+                  <div class="col">
+                    <div class="difficulty-box">
+                        <div class="difficulty-header">
+                        <h1> Medium </h1>
+                        </div>
+                            <hr>
+                            <p>Text</p>
+                            <p>Text</p>
+                            <p>Text</p>
+                            <p>Text</p>
+                            <hr> 
+                          <div class="Enquire-2">
+                          <button>BUTTON</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="difficulty-box">
+                          <div class="difficulty-header">
+                          <h1> Hard </h1>
+                          </div>
+                            <hr>
+                            <p>Text</p>                         
+                            <p>Text</p>                       
+                            <p>Text</p>
+                            <p>Text</p>
+                            <hr>
+                          <div class="Enquire-3">
+                          <button>BUTTON</button>
+                          </div>
+                        </div>
+                      </div>
+        
+        </div>
     </div>
+<script src="script.js"></script>
 </body>
 </html>
