@@ -24,7 +24,11 @@ button {
 /*-------------------------- Colors */
 
 body {
-    background-color: #dfa4fc;
+   background-color: #f9e0ff;
+}
+
+p {
+   color: #11005c;
 }
 
 #menu-buttons button {
@@ -46,7 +50,7 @@ body {
     color: #00fbff;
 }
 
-h1 {
+.game-name {
     color: #11005c;
 /*------------ code adjusted from GeeksforGeeks.org */
     text-shadow: -1px 1px 0 #00fbff,
@@ -77,4 +81,21 @@ h1 {
 
 #menu-buttons button {
     margin-top: 50px;
+}
+
+/*-------------------------- How to play */
+
+#how-to-play {
+    display: block;
+    text-align:center;
+}
+
+#how-to-play p {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+#how-to-play span {
+    font-size: 25px;
 }
