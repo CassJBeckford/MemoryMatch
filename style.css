@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600');
 
 /*-------------------------- General */
+
 /*------------ code taken from Google fonts */
 .fugaz-one-regular {
     font-family: "Fugaz One", sans-serif;
@@ -19,6 +20,14 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 5px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
 }
 
 /*-------------------------- Colors */
@@ -68,6 +77,7 @@ p {
 }
 
 #front-page {
+    position: fixed;
     padding-top: 100px;
 }
 
@@ -85,7 +95,14 @@ p {
 
 /*-------------------------- How to play */
 
+#instructions {
+    display: flex;
+    justify-content: center;
+    padding-top: 300px;
+}
+
 #how-to-play {
+    position: fixed;
     display: block;
     text-align:center;
 }
