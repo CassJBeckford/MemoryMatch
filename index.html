@@ -33,7 +33,7 @@
     <!-- Difficulty -->  
         <div id="mode-selection" class="hidden"> 
                 <div class="row difficultySelect">
-                  <div class="col">
+                  <div id="difficulty-selection" class="col">
                     <div class="difficulty-box">
                       <div class="difficulty-header">
                       <h1 class="game-name"> Easy </h1>
@@ -45,7 +45,7 @@
                         <p>Text</p>
                         <hr>
                       <div class="Enquire-1">
-                      <button class="play-button" id="easy">PLAY</button>
+                      <button class="play-button" id="easy" onclick="createBoard()">PLAY</button>
                       </div>
                     </div>
 
@@ -82,22 +82,22 @@
                           </div>
                         </div>
                       </div>
-        
+               </div>
         </div>
-    </div>
-    <!-- Game screen --> 
-  <div class="" id="game-screen">
-    <div id="game-buttons">
-      <button>RESET</button>
-        <button>MENU</button>
-      </div>
-      <div id="timer">
-        <p>0</p>
-      </div>
-      <div id="game-board">
-          
-      </div>
   </div>
+  <!-- Game screen --> 
+<div class="hidden" id="game-screen">
+  <div id="game-buttons">
+      <button>RESET</button>
+      <button>MENU</button>
+  </div>
+  <div id="timer">
+      <p>0</p>
+  </div>
+  <div id="game-board">
+          
+  </div>
+</div>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
