@@ -23,7 +23,7 @@ function makeRulesVisible() {
     showSection(menuSection.instructions);
 }
 
-function selectDifficulty() {
+function selectDifficulty() {}
     showSection(menuSection.modeSelection);
 }
 
