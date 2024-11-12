@@ -26,7 +26,7 @@ const easyDifficulty = document.getElementById('easy');
 const mediumDifficulty = document.getElementById('medium');
 const hardDifficulty = document.getElementById('hard');
 
-const cards = document.querySelectorAll('.card');
+
 let flipped = false;
 let firstMove, secondMove;
 
@@ -67,17 +67,12 @@ function makeInvisible(id){
     document.getElementById(id).classList.add("hidden")
 }
 
-function flipCard() {
-   card.classList.toggle("flipCard")
-}
 
-card.addEventListener('click', flipCard);
 
 function createEasyBoard(){
     let gameboard = document.getElementById("game-board");
     gameboard.innerHTML = "";
     for (let i = 0; i < 6; i++) {
-        cardBack = flipCards.splice(0, 6);
         gameboard.innerHTML += 
         `<div class="card">
             <div class="card-inner">

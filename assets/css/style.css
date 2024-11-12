@@ -182,11 +182,9 @@ p {
   }
   
   .card {
-      position: absolute;
       background-color: transparent;
       width: 200px;
       height: 300px;
-      transform: translate(-50%, -50%);
     }
   
     .card-inner {
