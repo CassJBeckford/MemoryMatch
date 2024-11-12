@@ -1,13 +1,34 @@
-const Cards = [
-    
-]
+const flipCards = [
+    "cheeky.png",
+    "cheeky.png",
+    "excited.png",
+    "excited.png",
+    "flirting.png",
+    "flirting.png",
+    "guilty.png",
+    "guilty.png",
+    "halo.png",
+    "halo.png",
+    "nervous.png",
+    "nervous.png",
+    "romantic.png",
+    "romantic.png",
+    "shocked.png",
+    "shocked.png",
+    "sick.png",
+    "sick.png"
+];
 
 
-// let difficulty = "";
+let difficulty = "";
 
-// const easyDifficulty = document.getElementById('easy');
-// const mediumDifficulty = document.getElementById('medium');
-// const hardDifficulty = document.getElementById('hard');
+const easyDifficulty = document.getElementById('easy');
+const mediumDifficulty = document.getElementById('medium');
+const hardDifficulty = document.getElementById('hard');
+
+const cards = document.querySelectorAll('.card');
+let flipped = false;
+let firstMove, secondMove;
 
 const menuSection = {
     instructions: 'instructions',
@@ -46,17 +67,22 @@ function makeInvisible(id){
     document.getElementById(id).classList.add("hidden")
 }
 
+function flipCard() {
+   card.classList.toggle("flipCard")
+}
+
+card.addEventListener('click', flipCard);
+
 function createEasyBoard(){
     let gameboard = document.getElementById("game-board");
     gameboard.innerHTML = "";
     for (let i = 0; i < 6; i++) {
+        cardBack = flipCards.splice(0, 6);
         gameboard.innerHTML += 
         `<div class="card">
             <div class="card-inner">
                 <div class="card-front fugaz-one-regular"> MM </div>
-                <div class="card-back">
-                    <img src="img/card-front.png" alt="peach" style="width:100px;height:200px;">
-                </div>
+                <div class="card-back"> </div>
             </div>
         </div>` 
     }
@@ -72,12 +98,8 @@ function createMediumBoard(){
         gameboard.innerHTML += 
         `<div class="card">
             <div class="card-inner">
-                <div class="card-front">
-                    <img src="img/card-back.png" alt="back" style="width:200px;height:300px;">
-                </div>
-                <div class="card-back">
-                    <img src="img/card-front.jpg" alt="peach" style="width:200px;height:300px;">
-                </div>
+                <div class="card-front"> MM </div>
+                <div class="card-back"> </div>
             </div>
         </div>` 
     }
@@ -106,4 +128,19 @@ function createHardBoard(){
     makeInvisible('menu-section')
     makeInvisible('difficulty-selection');
 }
+
+easyDifficulty.addEventListener("click", function () {
+    difficulty = "easy";
+    createEasyBoard();
+})
+
+mediumDifficulty .addEventListener("click", function () {
+    difficulty = "medium";
+    createMediumBoard();
+})
+
+hardDifficulty.addEventListener("click", function () {
+    difficulty = "hard";
+    createHardBoard();
+})
 
