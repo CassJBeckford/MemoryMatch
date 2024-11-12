@@ -120,7 +120,7 @@ p {
 }
 
 #card-example{
-   
+    position: fixed;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 60px);
@@ -171,10 +171,9 @@ p {
 
 /*-------------------------- Game Board */
 
+
 #game-board {
-    position: fixed;
-    align-items: center;
-    justify-content: center;
+   
     display: grid;
     grid-template-columns: repeat(5, 70px);
     grid-template-rows: repeat(5, 160px);
@@ -183,9 +182,11 @@ p {
   }
   
   .card {
+      position: absolute;
       background-color: transparent;
       width: 200px;
       height: 300px;
+      transform: translate(-50%, -50%);
     }
   
     .card-inner {
@@ -196,8 +197,8 @@ p {
       transition: transform 0.8s;
       transform-style: preserve-3d;
     }
-  
-    .card:hover .card-inner {
+
+    .cardFlip{
       transform: rotateY(180deg);
     }
   
@@ -212,6 +213,10 @@ p {
     .card-front {
      transition: tranform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
      cursor: pointer;
+     background-color: #11005c;
+     border-radius: 8px;
+     color:#00fbff;
+     font-size: 40px;
   }
   
   .card-back {
