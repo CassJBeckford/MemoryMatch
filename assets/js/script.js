@@ -1,13 +1,11 @@
-let cards = [];
+
 const gameboard = document.getElementById("game-board");
-
-let difficulty = "";
-
 const easyDifficulty = document.getElementById('easy');
 const mediumDifficulty = document.getElementById('medium');
 const hardDifficulty = document.getElementById('hard');
 
-
+let cards = [];
+let difficulty = "";
 let flipped = false;
 let firstMove, secondMove;
 
@@ -68,7 +66,12 @@ function addCards() {
       `;
       gameboard.appendChild(cardElement);
       cardElement.addEventListener("click", flipCard);
+      cardMatch();
     }
+}
+
+function shuffleCards(){
+    // TO DO
 }
 
 function flipCard() {
@@ -84,8 +87,52 @@ function flipCard() {
   
     secondMove = this;
     flipped = true;
-  }
+    cardMatch();
+}
 
+function cardMatch(){
+    let match = firstMove === secondMove;
+    if (!match){
+        unflipCard();
+    }
+    else {
+        reset();
+    }
+}
+
+function reset(){
+    firstMove = null;
+    secondMove = null;
+    flipped = false;
+}
+
+function freezeCards(){
+   
+}
+
+function unflipCard(){
+    setTimeout(() => {
+    firstMove.classList.remove("flip")
+    secondMove.classList.remove("flip")
+    }, 1000);
+;
+}
+
+function restart(){
+    // TO DO 
+}
+
+function updateEastCountdown(){
+    // TO DO
+}
+
+function updateMediumCountdown(){
+    // TO DO 
+}
+
+function updateHardCountdown(){
+    // TO DO   
+}
 
 function createEasyBoard(){
     addCards();
@@ -122,4 +169,3 @@ hardDifficulty.addEventListener("click", function () {
     difficulty = "hard";
     createHardBoard();
 })
-
