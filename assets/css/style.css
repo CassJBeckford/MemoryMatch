@@ -173,11 +173,9 @@ p {
 
 
 #game-board {
-   
     display: grid;
-    grid-template-columns: repeat(5, 70px);
-    grid-template-rows: repeat(5, 160px);
-    grid-gap: 150px;
+    grid-template-columns: repeat(6, 140px);
+    grid-template-rows: repeat(2, calc(140px / 2 * 3));
     padding-top: 100px;
   }
   
@@ -189,16 +187,21 @@ p {
   
     .card-inner {
       position: relative;
-      width: 100%;
-      height: 100%;
-      text-align: center;
+      width: 140px;
+      height: calc(140px / 2 * 3);
+      background-color: white;
       transition: transform 0.8s;
       transform-style: preserve-3d;
     }
 
-    .cardFlip{
-      transform: rotateY(180deg);
-    }
+    .front-image {
+        width: 60px;
+        height: 60px;
+      }
+
+      .card-inner.flip {
+        transform: rotateY(180deg);
+      }
   
     .card-front, .card-back {
       position: absolute;
@@ -206,20 +209,24 @@ p {
       height: 100%;
       -webkit-backface-visibility: hidden; 
       backface-visibility: hidden;
+      border-radius: 10px;
     }
   
-    .card-front {
-     transition: tranform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-     cursor: pointer;
-     background-color: #11005c;
-     border-radius: 8px;
-     color:#00fbff;
+    .card-inner .card-front {
+     display: flex;
+     justify-content: center;
+     align-items: center;
      font-size: 40px;
-  }
+    }
   
-  .card-back {
-      background-color: dodgerblue;
+  .card-inner .card-back {
+      transition: tranform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      cursor: pointer;
+      background-color: #11005c;
       color: white;
+    }
+
+    .card-inner .card-front {
       transform: rotateY(180deg);
     }
     
