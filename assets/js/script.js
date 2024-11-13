@@ -1,24 +1,5 @@
-const flipCards = [
-    "cheeky.png",
-    "cheeky.png",
-    "excited.png",
-    "excited.png",
-    "flirting.png",
-    "flirting.png",
-    "guilty.png",
-    "guilty.png",
-    "halo.png",
-    "halo.png",
-    "nervous.png",
-    "nervous.png",
-    "romantic.png",
-    "romantic.png",
-    "shocked.png",
-    "shocked.png",
-    "sick.png",
-    "sick.png"
-];
-
+let cards = [];
+const gameboard = document.getElementById("game-board");
 
 let difficulty = "";
 
@@ -29,6 +10,13 @@ const hardDifficulty = document.getElementById('hard');
 
 let flipped = false;
 let firstMove, secondMove;
+
+fetch("./data/cards.json")
+  .then((res) => res.json())
+  .then((data) => {
+    cards = [...data, ...data];
+    addCards();
+});
 
 const menuSection = {
     instructions: 'instructions',
@@ -67,58 +55,54 @@ function makeInvisible(id){
     document.getElementById(id).classList.add("hidden")
 }
 
+function addCards() {
+    for (let card of cards) {
+      const cardElement = document.createElement("div");
+      cardElement.classList.add("card-inner");
+      cardElement.setAttribute("data-name", card.name);
+      cardElement.innerHTML = `
+        <div class="card-front">
+          <img class="front-image" src=${card.image} />
+        </div>
+        <div class="card-back"></div>
+      `;
+      gameboard.appendChild(cardElement);
+      cardElement.addEventListener("click", flipCard);
+    }
+}
+
+function flipCard() {
+    if (flipped) return;
+    if (this === firstMove) return;
+  
+    this.classList.add("flip");
+  
+    if (!firstMove) {
+      firstMove = this;
+      return;
+    }
+  
+    secondMove = this;
+    flipped = true;
+  }
 
 
 function createEasyBoard(){
-    let gameboard = document.getElementById("game-board");
-    gameboard.innerHTML = "";
-    for (let i = 0; i < 6; i++) {
-        gameboard.innerHTML += 
-        `<div class="card">
-            <div class="card-inner">
-                <div class="card-front fugaz-one-regular"> MM </div>
-                <div class="card-back"> </div>
-            </div>
-        </div>` 
-    }
+    addCards();
     makeVisible('game-screen');
     makeInvisible('menu-section')
     makeInvisible('difficulty-selection');
 }
 
 function createMediumBoard(){
-    let gameboard = document.getElementById("game-board");
-    gameboard.innerHTML = "";
-    for (let i = 0; i < 12; i++) {
-        gameboard.innerHTML += 
-        `<div class="card">
-            <div class="card-inner">
-                <div class="card-front"> MM </div>
-                <div class="card-back"> </div>
-            </div>
-        </div>` 
-    }
+    addCards();
     makeVisible('game-screen');
     makeInvisible('menu-section')
     makeInvisible('difficulty-selection');
 }
 
 function createHardBoard(){
-    let gameboard = document.getElementById("game-board");
-    gameboard.innerHTML = "";
-    for (let i = 0; i < 18; i++) {
-        gameboard.innerHTML += 
-        `<div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="img/card-back.png" alt="back" style="width:200px;height:300px;">
-                </div>
-                <div class="card-back">
-                    <img src="img/card-front.jpg" alt="peach" style="width:200px;height:300px;">
-                </div>
-            </div>
-        </div>` 
-    }
+    addCards();
     makeVisible('game-screen');
     makeInvisible('menu-section')
     makeInvisible('difficulty-selection');
