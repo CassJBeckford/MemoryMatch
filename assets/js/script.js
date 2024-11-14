@@ -52,6 +52,7 @@ fetch("./data/cards.json")
   .then((data) => {
     cards = [...data, ...data];
     addCards();
+    shuffle(cards);
     });
 
 function addCards() {
@@ -70,9 +71,20 @@ function addCards() {
     }
 }
 
-function shuffleCards(){
-    // TO DO
-}
+function shuffle(array) {
+    let currentIndex = array.length,
+      temporaryValue,
+      randomIndex;
+  
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  }
 
 function flipCard() {
     if (flipped) return;
