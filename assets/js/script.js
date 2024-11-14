@@ -51,8 +51,8 @@ fetch("./data/cards.json")
   .then((res) => res.json())
   .then((data) => {
     cards = [...data, ...data];
-    addCards();
     shuffle(cards);
+    addCards();
     });
 
 function addCards() {
@@ -78,7 +78,7 @@ function shuffle(array) {
   
     while (currentIndex !== 0) {
       randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
+      currentIndex = currentIndex - 1;
       temporaryValue = array[currentIndex];
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
