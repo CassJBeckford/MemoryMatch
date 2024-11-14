@@ -104,14 +104,18 @@ function freezeCards() {
     firstMove.removeEventListener("click", flipCard);
     secondMove.removeEventListener("click", flipCard);
   
-    reset();
+    firstMove = null;
+    secondMove = null;
+    flipped = false;
 }
   
 function unflipCards() {
     setTimeout(() => {
       firstMove.classList.remove("flip");
       secondMove.classList.remove("flip");
-      reset();
+      firstMove = null;
+      secondMove = null;
+      flipped = false;
     }, 1000);
 }
   
