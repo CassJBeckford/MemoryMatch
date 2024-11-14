@@ -6,15 +6,9 @@ const hardDifficulty = document.getElementById('hard');
 
 let cards = [];
 let difficulty = "";
+let moves = 0;
 let flipped = false;
 let firstMove, secondMove;
-
-fetch("./data/cards.json")
-  .then((res) => res.json())
-  .then((data) => {
-    cards = [...data, ...data];
-    addCards();
-});
 
 const menuSection = {
     instructions: 'instructions',
@@ -53,6 +47,13 @@ function makeInvisible(id){
     document.getElementById(id).classList.add("hidden")
 }
 
+fetch("./data/cards.json")
+  .then((res) => res.json())
+  .then((data) => {
+    cards = [...data, ...data];
+    addCards();
+    });
+
 function addCards() {
     for (let card of cards) {
       const cardElement = document.createElement("div");
@@ -66,7 +67,6 @@ function addCards() {
       `;
       gameboard.appendChild(cardElement);
       cardElement.addEventListener("click", flipCard);
-      cardMatch();
     }
 }
 
@@ -90,32 +90,35 @@ function flipCard() {
     cardMatch();
 }
 
-function cardMatch(){
-    let match = firstMove === secondMove;
-    if (!match){
-        unflipCard();
-    }
-    else {
-        reset();
-    }
+function cardMatch() {
+    let isMatch = firstMove.dataset.name === secondMove.dataset.name;
+    if (!isMatch){
+        unflipCards();
+  }
+  else {
+        freezeCards();
+  }
 }
-
-function reset(){
+  
+function freezeCards() {
+    firstMove.removeEventListener("click", flipCard);
+    secondMove.removeEventListener("click", flipCard);
+  
+    reset();
+}
+  
+function unflipCards() {
+    setTimeout(() => {
+      firstMove.classList.remove("flip");
+      secondMove.classList.remove("flip");
+      reset();
+    }, 1000);
+}
+  
+function reset() {
     firstMove = null;
     secondMove = null;
     flipped = false;
-}
-
-function freezeCards(){
-   
-}
-
-function unflipCard(){
-    setTimeout(() => {
-    firstMove.classList.remove("flip")
-    secondMove.classList.remove("flip")
-    }, 1000);
-;
 }
 
 function restart(){
