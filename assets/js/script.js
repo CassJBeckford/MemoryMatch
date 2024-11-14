@@ -103,26 +103,21 @@ function cardMatch() {
 function freezeCards() {
     firstMove.removeEventListener("click", flipCard);
     secondMove.removeEventListener("click", flipCard);
-  
-    firstMove = null;
-    secondMove = null;
-    flipped = false;
+    reset();
 }
   
 function unflipCards() {
     setTimeout(() => {
       firstMove.classList.remove("flip");
       secondMove.classList.remove("flip");
-      firstMove = null;
-      secondMove = null;
-      flipped = false;
+      reset();
     }, 1000);
 }
-  
-function reset() {
-    firstMove = null;
-    secondMove = null;
-    flipped = false;
+
+function reset(){
+firstMove = null;
+secondMove = null;
+flipped = false;
 }
 
 function restart(){
