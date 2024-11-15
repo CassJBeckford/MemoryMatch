@@ -9,93 +9,52 @@
 </head>
 <body>
     <!-- Menu --> 
-    <div id="menu-section">
-        <div id="front-page" class="">
-            <div id="menu-title" >
-                <h1 class="fugaz-one-regular game-name">MEMORY MATCH</h1>
-            </div>
-            <div id="menu-buttons">
-                <button id="play" onclick="selectDifficulty()">START</button>
-                <br>
-                <button id="rules" onclick="makeRulesVisible()">HOW TO PLAY</button>
-            </div>
-        </div>
-    <!-- How to play --> 
-         <div id="instructions" class="hidden">
-            <div id="how-to-play">
-                <p><span class="fugaz-one-regular game-name">Memory Match</span> is a game to test your memory</p>
-                <p>Once the game has started the gameboard will feature a set amount of cards depending on the difficulty.</p>
-                <p>All cards contain a picture placed face down that will be revealed once pressed.</p>
-                <p>Each picture appears on a card exactly twice and in order to make a match you must turn over the cards with the same picture.</p>
-                <p>If you turn over a pair of cards that don't match they will both return to their face down position.</p>
-            </div>
-         </div>
-    <!-- Difficulty -->  
-        <div id="mode-selection" class="hidden"> 
-                <div class="row difficultySelect">
-                  <div id="difficulty-selection" class="col">
-                    <div class="difficulty-box">
-                      <div class="difficulty-header">
-                      <h1 class="game-name"> Easy </h1>
-                      </div>
-                        <hr>
-                        <p>Text</p>
-                        <p>Text</p>
-                        <p>Text</p>
-                        <p>Text</p>
-                        <hr>
-                      <div class="Enquire-1">
-                      <button class="play-button" id="easy">PLAY</button>
-                      </div>
-                    </div>
-
-                  <div class="col">
-                    <div class="difficulty-box">
-                        <div class="difficulty-header">
-                        <h1 class="game-name"> Medium </h1>
-                        </div>
-                            <hr>
-                            <p>Text</p>
-                            <p>Text</p>
-                            <p>Text</p>
-                            <p>Text</p>
-                            <hr> 
-                          <div class="Enquire-2">
-                          <button class="play-button" id="medium">PLAY</button>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col">
-                        <div class="difficulty-box">
-                          <div class="difficulty-header">
-                          <h1 class="game-name"> Hard </h1>
-                          </div>
-                            <hr>
-                            <p>Text</p>                         
-                            <p>Text</p>                       
-                            <p>Text</p>
-                            <p>Text</p>
-                            <hr>
-                          <div class ="Enquire-3">
-                          <button class="play-button" id="hard" onclick="createHardBoard()">PLAY</button>
-                          </div>
-                        </div>
-                      </div>
-               </div>
-        </div>
+<div id="menu-section">
+  <div id="front-page" class="">
+    <div id="menu-title" >
+      <h1 class="fugaz-one-regular game-name">MEMORY MATCH</h1>
+    </div>
+    <div id="menu-buttons">
+      <button id="play" onclick="selectDifficulty()">START</button>
+      <br>
+      <button id="rules" onclick="makeRulesVisible()">HOW TO PLAY</button>
+    </div>
   </div>
+    <!-- How to play --> 
+  <div id="instructions" class="hidden">
+    <div id="how-to-play">
+      <p><span class="fugaz-one-regular game-name">Memory Match</span> is a game to test your memory</p>
+      <p>Once the game has started the gameboard will feature a set amount of cards depending on the difficulty.</p>
+      <p>All cards contain a picture placed face down that will be revealed once pressed.</p>
+      <p>Each picture appears on a card exactly twice and in order to make a match you must turn over the cards with the same picture.</p>
+      <p>If you turn over a pair of cards that don't match they will both return to their face down position.</p>
+    </div>
+  </div>
+    <!-- Difficulty -->  
+  <div id="mode-selection" class="hidden"> 
+    <div id="difficulty-section" class="row difficultySelect">
+      <div class="Enquire-1">
+        <button class="play-button" id="easy">PLAY</button>
+      </div>
+      <div class="Enquire-2">
+        <button class="play-button" id="medium">PLAY</button>
+      </div>                   
+      <div class ="Enquire-3">
+        <button class="play-button" id="hard" onclick="createHardBoard()">PLAY</button>
+      </div>
+  </div>
+</div>
   <!-- Game screen --> 
 <div class="hidden" id="game-screen">
-  <div id="game-buttons">
-      <button>RESET</button>
-      <button>MENU</button>
+  <div class="game-buttons">
+    <button>RESET</button>
+    <button>MENU</button>
   </div>
   <div id="timer">
-      <p id="countdown">Num turns : <span id="easyTime">15</span><span id="mediumTime">10</span><span id="hardTime">5</span></p>
+    <p id="countdown">Num turns : <span id="easyTime">15</span><span id="mediumTime">10</span><span id="hardTime">5</span></p>
   </div>
   <div id="game-board">
-          
+
   </div>
 </div>
 <script src="assets/js/script.js"></script>
