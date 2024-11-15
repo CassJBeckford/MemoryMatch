@@ -96,16 +96,14 @@ p {
 /*-------------------------- How to play */
 
 #instructions {
-    display: flex;
+    display: block;
+    position: fixed;
     justify-content: center;
     padding-top: 100px;
 }
 
 #how-to-play {
-    position: fixed;
-    display: block;
     text-align:center;
-    ;
 }
 
 #how-to-play p {
@@ -117,16 +115,6 @@ p {
 
 #how-to-play span {
     font-size: 25px;
-}
-
-#card-example{
-    position: fixed;
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(2, 60px);
-    grid-template-rows: repeat(2, 160px);
-    grid-gap: 150px;
-    padding-top: 100px;
 }
 
 /*-------------------------- Select difficulty */
