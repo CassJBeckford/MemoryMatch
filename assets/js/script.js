@@ -170,12 +170,15 @@ function restart(){
 
 function updateEasyCountdown(){
     if(flipped && easyTime > 0){
-    let seconds = easyTime;
-    easyCountdown.innerHTML = `${seconds}`
-    easyTime--;
+        let seconds = easyTime;
+        easyCountdown.innerHTML = `${seconds}`;
+        easyTime--;
+    }
+    else if(easyTime === 0){
+        restart();
     }
     else{
-    easyCountdown.innerHTML = easyTime    
+        easyCountdown.innerHTML = easyTime;  
     }
 }
 
@@ -185,6 +188,9 @@ function updateMediumCountdown(){
         let seconds = mediumTime;
         mediumCountdown.innerHTML = `${seconds}`
         mediumTime--;
+    }
+    else if(mediumTime === 0){
+        restart();
     }
         else{
         mediumCountdown.innerHTML = mediumTime    
@@ -196,6 +202,9 @@ function updateHardCountdown(){
         let seconds = hardTime;
         hardCountdown.innerHTML = `${seconds}`
         hardTime--;
+    }
+    else if(hardTime === 0){
+        restart();
     }
         else{
         hardCountdown.innerHTML = hardTime    
