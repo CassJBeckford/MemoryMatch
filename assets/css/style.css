@@ -40,13 +40,13 @@ p {
    color: #11005c;
 }
 
-#menu-buttons button {
+button {
    background-color: #11005c;
    color: #00fbff;
    transition: 0.3s;
 }
 
-#menu-buttons button:hover {
+button:hover {
     background-color: #00fbff;
     color: #11005c;
     transition: 0.3s;
@@ -54,7 +54,7 @@ p {
     border-color: #11005c;
 }
 
-#menu-buttons button:active {
+button:active {
     background-color: #11005c;
     color: #00fbff;
 }
@@ -125,13 +125,12 @@ p {
 
 .difficultySelect {
     display: inline-flex;
-    justify-content: space-around;
-    padding-bottom: 60px;
-    padding-left: 30px;
+    padding: 200px 0 60px 30px
 }
 
-.difficultySelect{
-   padding-top: 200px;
+.play-button {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /*-------------------------- Game Board */
