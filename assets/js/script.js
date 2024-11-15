@@ -4,6 +4,10 @@ const easyDifficulty = document.getElementById('easy');
 const mediumDifficulty = document.getElementById('medium');
 const hardDifficulty = document.getElementById('hard');
 
+let easyTime = 30;
+const mediumTime = 20;
+const hardTime = 10;
+
 let cards = [];
 let difficulty = "";
 let moves = 0;
@@ -136,8 +140,19 @@ function restart(){
     // TO DO 
 }
 
-function updateEastCountdown(){
-    // TO DO
+const easyCountdown = document.getElementById("easyTime");
+
+setInterval(updateEasyCountdown, 1000);
+
+function updateEasyCountdown(){
+    if(!gameboard.classList.contains("hidden")){
+    let seconds = easyTime;
+    easyCountdown.innerHTML = `${seconds}`
+    easyTime--;
+    }
+    else{
+    easyCountdown.innerHTML = easyTime    
+    }
 }
 
 function updateMediumCountdown(){
@@ -153,6 +168,8 @@ function createEasyBoard(){
     makeVisible('game-screen');
     makeInvisible('menu-section')
     makeInvisible('difficulty-selection');
+    makeInvisible('mediumTime');
+    makeInvisible('hardTime');
 }
 
 function createMediumBoard(){
@@ -160,6 +177,8 @@ function createMediumBoard(){
     makeVisible('game-screen');
     makeInvisible('menu-section')
     makeInvisible('difficulty-selection');
+    makeInvisible('easyTime');
+    makeInvisible('hardTime');
 }
 
 function createHardBoard(){
@@ -167,6 +186,8 @@ function createHardBoard(){
     makeVisible('game-screen');
     makeInvisible('menu-section')
     makeInvisible('difficulty-selection');
+    makeInvisible('easyTime');
+    makeInvisible('mediumTime');
 }
 
 easyDifficulty.addEventListener("click", function () {
