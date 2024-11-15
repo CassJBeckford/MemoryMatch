@@ -123,42 +123,18 @@ p {
     position: fixed;
 }
 
-.difficultySelect .col{
+.difficultySelect {
     display: inline-flex;
     justify-content: space-around;
     padding-bottom: 60px;
     padding-left: 30px;
 }
 
-.box {
-    border-color: #ffff;
-    box-shadow: 5px 3px 10px rgba(37, 85, 187, .7);
-    padding: 10px 0 0 20px;
-    margin-top: 70px;
-    background-color: #ffff;
-}
-
-.difficulty-header {
-    font-size: 150%;
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    color: #2555BB;
-}
-
 .difficultySelect{
    padding-top: 200px;
 }
 
-.difficulty-box{
-    border-color: #ffff;
-    box-shadow: 5px 3px 10px rgba(37, 85, 187, .7);
-    height: 500px;
-    width: 300px;
-    background-color: #ffff;
-}
-
 /*-------------------------- Game Board */
-
 
 #game-board {
     display: grid;
