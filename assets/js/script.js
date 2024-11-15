@@ -149,7 +149,17 @@ flipped = false;
 }
 
 function restart(){
-    // TO DO 
+    easyCountdown.innerHTML = 15
+    easyTime = 15
+    mediumCountdown.innerHTML = 10
+    mediumTime = 10
+    hardCountdown.innerHTML = 5
+    hardTime = 5
+    let gameboard = document.getElementById("game-board");
+    gameboard.innerHTML = "";
+    addCards();
+    shuffle(cards);
+     
 }
 
 function updateEasyCountdown(){
