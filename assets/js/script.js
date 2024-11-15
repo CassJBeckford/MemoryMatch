@@ -4,9 +4,16 @@ const easyDifficulty = document.getElementById('easy');
 const mediumDifficulty = document.getElementById('medium');
 const hardDifficulty = document.getElementById('hard');
 
-let easyTime = 30;
-const mediumTime = 20;
-const hardTime = 10;
+const easyCountdown = document.getElementById("easyTime");
+setInterval(updateEasyCountdown, 1000);
+const mediumCountdown = document.getElementById("mediumTime");
+setInterval(updateMediumCountdown, 1000);
+const hardCountdown = document.getElementById("hardTime");
+setInterval(updateHardCountdown, 1000);
+
+let easyTime = 15;
+let mediumTime = 10;
+let hardTime = 5;
 
 let cards = [];
 let difficulty = "";
@@ -140,12 +147,8 @@ function restart(){
     // TO DO 
 }
 
-const easyCountdown = document.getElementById("easyTime");
-
-setInterval(updateEasyCountdown, 1000);
-
 function updateEasyCountdown(){
-    if(!gameboard.classList.contains("hidden")){
+    if(flipped && easyTime > 0){
     let seconds = easyTime;
     easyCountdown.innerHTML = `${seconds}`
     easyTime--;
@@ -155,12 +158,27 @@ function updateEasyCountdown(){
     }
 }
 
+
 function updateMediumCountdown(){
-    // TO DO 
+    if(flipped && mediumTime > 0){
+        let seconds = mediumTime;
+        mediumCountdown.innerHTML = `${seconds}`
+        mediumTime--;
+    }
+        else{
+        mediumCountdown.innerHTML = mediumTime    
+    }
 }
 
 function updateHardCountdown(){
-    // TO DO   
+    if(flipped && hardTime > 0){
+        let seconds = hardTime;
+        hardCountdown.innerHTML = `${seconds}`
+        hardTime--;
+    }
+        else{
+        hardCountdown.innerHTML = hardTime    
+    } 
 }
 
 function createEasyBoard(){
