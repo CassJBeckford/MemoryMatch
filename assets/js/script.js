@@ -66,6 +66,7 @@ function makeInvisible(id){
 function returnToMenu(){
     makeVisible('front-page')
     makeInvisible('game-screen');
+    restart();
 }
 
 fetch("./data/cards.json")
@@ -204,6 +205,7 @@ function updateHardCountdown(){
 function createEasyBoard(){
     addCards();
     makeVisible('game-screen');
+    makeVisible('easyTime');
     makeInvisible('difficulty-section');
     makeInvisible('mediumTime');
     makeInvisible('hardTime');
@@ -212,6 +214,7 @@ function createEasyBoard(){
 function createMediumBoard(){
     addCards();
     makeVisible('game-screen');
+    makeVisible('mediumTime');
     makeInvisible('difficulty-section');
     makeInvisible('easyTime');
     makeInvisible('hardTime');
@@ -220,6 +223,7 @@ function createMediumBoard(){
 function createHardBoard(){
     addCards();
     makeVisible('game-screen');
+    makeVisible('hardTime');
     makeInvisible('difficulty-section');
     makeInvisible('easyTime');
     makeInvisible('mediumTime');
