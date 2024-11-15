@@ -22,6 +22,7 @@ let flipped = false;
 let firstMove, secondMove;
 
 const menuSection = {
+    frontpage: 'front-page',
     instructions: 'instructions',
     modeSelection: 'mode-selection'
 };
@@ -40,6 +41,10 @@ function showSection(sectionId){
             section.classList.add('visible');
         }
     }
+}
+
+function makeFrontPageVisible() {
+    showSection(menuSection.frontpage);
 }
 
 function makeRulesVisible() {
@@ -185,7 +190,8 @@ function createEasyBoard(){
     addCards();
     makeVisible('game-screen');
     makeInvisible('menu-section')
-    makeInvisible('difficulty-selection');
+    makeInvisible('mode-selection');
+    makeInvisible('difficulty-section');
     makeInvisible('mediumTime');
     makeInvisible('hardTime');
 }
@@ -194,7 +200,8 @@ function createMediumBoard(){
     addCards();
     makeVisible('game-screen');
     makeInvisible('menu-section')
-    makeInvisible('difficulty-selection');
+    makeInvisible('mode-selection');
+    makeInvisible('difficulty-section');
     makeInvisible('easyTime');
     makeInvisible('hardTime');
 }
@@ -203,7 +210,8 @@ function createHardBoard(){
     addCards();
     makeVisible('game-screen');
     makeInvisible('menu-section')
-    makeInvisible('difficulty-selection');
+    makeInvisible('mode-selection');
+    makeInvisible('difficulty-section');
     makeInvisible('easyTime');
     makeInvisible('mediumTime');
 }
