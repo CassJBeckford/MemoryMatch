@@ -135,16 +135,42 @@ button:active {
 
 /*-------------------------- Game Board */
 
+#game-screen{
+    position: relative;
+}
+
+#game-board {
+    position: absolute;
+    top: 200px;
+}
+
+#game-board3 {
+    position: absolute;
+    top: 200px;
+}
+
 #game-board {
     display: grid;
     grid-template-columns: repeat(4, 140px);
     grid-template-rows: repeat(4, 140px);
-    padding-top: 10px;
     grid-gap: 20px;
-    padding-top: 40px;
-  }
-  
-  
+
+}
+
+#game-board2 {
+    display: grid;
+    grid-template-columns: repeat(4, 140px);
+    grid-template-rows: repeat(4, 140px);
+    grid-gap: 20px;
+}
+
+#game-board3 {
+    display: grid;
+    grid-template-columns: repeat(4, 140px);
+    grid-template-rows: repeat(4, 140px);
+    grid-gap: 20px;
+}
+
 .card-inner {
     position: relative;
     width: 140px;
