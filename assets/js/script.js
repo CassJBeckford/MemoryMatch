@@ -1,5 +1,10 @@
 
+const board1 = document.getElementById("board1")
+const board2 = document.getElementById("board2")
+const board3 = document.getElementById("board3")
 const gameboard = document.getElementById("game-board");
+const gameboard2 = document.getElementById("game-board2");
+const gameboard3 = document.getElementById("game-board3");
 const easyDifficulty = document.getElementById('easy');
 const mediumDifficulty = document.getElementById('medium');
 const hardDifficulty = document.getElementById('hard');
@@ -75,6 +80,8 @@ fetch("./data/cards.json")
     cards = [...data, ...data];
     shuffle(cards);
     addCards();
+    addCards2();
+    addCards3();
     });
 
 function addCards() {
@@ -88,7 +95,42 @@ function addCards() {
         </div>
         <div class="card-back"></div>
       `;
+      board1.appendChild(gameboard)
       gameboard.appendChild(cardElement);
+      cardElement.addEventListener("click", flipCard);
+    }
+}
+
+function addCards2() {
+    for (let card of cards) {
+      const cardElement = document.createElement("div");
+      cardElement.classList.add("card-inner");
+      cardElement.setAttribute("data-name", card.name);
+      cardElement.innerHTML = `
+        <div class="card-front">
+          <img class="front-image" src=${card.image} />
+        </div>
+        <div class="card-back"></div>
+      `;
+      board2.appendChild(gameboard2)
+      gameboard2.appendChild(cardElement);
+      cardElement.addEventListener("click", flipCard);
+    }
+}
+
+function addCards3() {
+    for (let card of cards) {
+      const cardElement = document.createElement("div");
+      cardElement.classList.add("card-inner");
+      cardElement.setAttribute("data-name", card.name);
+      cardElement.innerHTML = `
+        <div class="card-front">
+          <img class="front-image" src=${card.image} />
+        </div>
+        <div class="card-back"></div>
+      `;
+      board3.appendChild(gameboard3)
+      gameboard3.appendChild(cardElement);
       cardElement.addEventListener("click", flipCard);
     }
 }
@@ -155,15 +197,53 @@ flipped = false;
 }
 
 function restart(){
+
     easyCountdown.innerHTML = 15
     easyTime = 15
-    mediumCountdown.innerHTML = 10
-    mediumTime = 10
-    hardCountdown.innerHTML = 5
-    hardTime = 5
     let gameboard = document.getElementById("game-board");
     gameboard.innerHTML = "";
     addCards();
+    shuffle(cards); 
+
+    mediumCountdown.innerHTML = 10
+    mediumTime = 10
+    let gameboard2 = document.getElementById("game-board2");
+    gameboard2.innerHTML = "";
+    addCards2();
+    shuffle(cards);
+
+    hardCountdown.innerHTML = 5
+    hardTime = 5
+    let gameboard3 = document.getElementById("game-board3");
+    gameboard3.innerHTML = "";
+    addCards3();
+    shuffle(cards);
+}
+function restartEasy(){
+    easyCountdown.innerHTML = 15
+    easyTime = 15
+    let gameboard = document.getElementById("game-board");
+    gameboard.innerHTML = "";
+    addCards();
+    shuffle(cards); 
+}
+
+function restartMedium(){
+    mediumCountdown.innerHTML = 10
+    mediumTime = 10
+    let gameboard2 = document.getElementById("game-board2");
+    gameboard2.innerHTML = "";
+    addCards2();
+    shuffle(cards);
+     
+}
+
+function restartHard(){
+    hardCountdown.innerHTML = 5
+    hardTime = 5
+    let gameboard3 = document.getElementById("game-board3");
+    gameboard3.innerHTML = "";
+    addCards3();
     shuffle(cards);
      
 }
@@ -175,7 +255,7 @@ function updateEasyCountdown(){
         easyTime--;
     }
     else if(easyTime === 0){
-        restart();
+        restartEasy();
     }
     else{
         easyCountdown.innerHTML = easyTime;  
@@ -190,7 +270,7 @@ function updateMediumCountdown(){
         mediumTime--;
     }
     else if(mediumTime === 0){
-        restart();
+        restartMedium();
     }
         else{
         mediumCountdown.innerHTML = mediumTime    
@@ -204,7 +284,7 @@ function updateHardCountdown(){
         hardTime--;
     }
     else if(hardTime === 0){
-        restart();
+        restartHard();
     }
         else{
         hardCountdown.innerHTML = hardTime    
@@ -214,28 +294,37 @@ function updateHardCountdown(){
 function createEasyBoard(){
     addCards();
     makeVisible('game-screen');
+    makeVisible('game-board')
     makeVisible('easyTime');
     makeInvisible('difficulty-section');
     makeInvisible('mediumTime');
     makeInvisible('hardTime');
+    makeInvisible('game-board2');
+    makeInvisible('game-board3');
 }
 
 function createMediumBoard(){
-    addCards();
+    addCards2();
+    makeVisible('game-board2');
     makeVisible('game-screen');
     makeVisible('mediumTime');
     makeInvisible('difficulty-section');
-    makeInvisible('easyTime');
-    makeInvisible('hardTime');
+    makeInvisible('easyTime')
+    makeInvisible('hardTime')
+    makeInvisible('game-board');
+    makeInvisible('game-board3');
 }
 
 function createHardBoard(){
-    addCards();
+    addCards3();
+    makeVisible('game-board3');
     makeVisible('game-screen');
     makeVisible('hardTime');
     makeInvisible('difficulty-section');
-    makeInvisible('easyTime');
-    makeInvisible('mediumTime');
+    makeInvisible('mediumTime')
+    makeInvisible('easyTime')
+    makeInvisible('game-board2');
+    makeInvisible('game-board');
 }
 
 easyDifficulty.addEventListener("click", function () {
