@@ -45,7 +45,8 @@
   </div>
 </div>
   <!-- Game screen --> 
-<div class="hidden" id="game-screen">
+
+<div id="game-screen" class="hidden">
   <div class="game-buttons">
     <button onclick="restart()">RESET</button>
     <button onclick="returnToMenu()">MENU</button>
@@ -53,8 +54,18 @@
   <div id="timer">
     <p id="countdown">Num turns : <span id="easyTime">15</span><span id="mediumTime">10</span><span id="hardTime">5</span></p>
   </div>
-  <div id="game-board">
 
+  <div id="board1">
+    <div id="game-board">
+    </div>
+  </div>
+  <div id="board2">    
+    <div id="game-board2">
+    </div>
+  </div>
+  <div id="board3"> 
+    <div id="game-board3">
+    </div>
   </div>
 </div>
 <script src="assets/js/script.js"></script>
