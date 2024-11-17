@@ -188,7 +188,7 @@ function shuffle(array) {
     return array;
   }
 
-  /** Add cards function for third board */
+  /** Flip cards on first and second move */
 function flipCard() {
     // If flipped is equal to false nothing will execute
     if (flipped) return;
@@ -209,7 +209,7 @@ function flipCard() {
     cardMatch();
 }
 
-/** Add cards function for third board */
+/** Determine whether cards have or have not matched */
 function cardMatch() {
     // Define variable equal to first and second move being the same card 
     let isMatch = firstMove.dataset.name === secondMove.dataset.name;
@@ -223,7 +223,7 @@ function cardMatch() {
     }
 }
  
-/** Add cards function for third board */
+/** Freeze first and second move cards in place */
 function freezeCards() {
     // Remove abilty to flip card cards
     firstMove.removeEventListener("click", flipCard);
@@ -232,7 +232,7 @@ function freezeCards() {
     reset();
 }
 
-/** Add cards function for third board */
+/** Unflip first and second move cards */
 function unflipCards() {
     setTimeout(() => {
       // Unlfip both cards
