@@ -22,16 +22,23 @@
   </div>
     <!-- How to play --> 
   <div id="instructions" class="hidden">
+    <button onclick="returnToMenu()"> &lt </button>
     <div id="how-to-play">
       <p><span class="fugaz-one-regular game-name">Memory Match</span> is a game to test your memory</p>
       <p>Once the game has started the gameboard will feature a set amount of cards depending on the difficulty.</p>
       <p>All cards contain a picture placed face down that will be revealed once pressed.</p>
       <p>Each picture appears on a card exactly twice and in order to make a match you must turn over the cards with the same picture.</p>
       <p>If you turn over a pair of cards that don't match they will both return to their face down position.</p>
+      <p><span class="fugaz-one-regular regular">EASY -</span> is a game to test your memory</p>
+      <p><span class="fugaz-one-regular regular">MEDIUM -</span> is a game to test your memory</p>
+      <p><span class="fugaz-one-regular hard">HARD -</span> is a game to test your memory</p>
     </div>
   </div>
     <!-- Difficulty -->  
   <div id="mode-selection" class="hidden"> 
+    <div id="difficulty-title">
+      <h1 class="fugaz-one-regular game-name">/ SELECT DIFFICULTY /</h1>
+    </div>
     <div id="difficulty-section" class="row difficultySelect">
       <div class="Enquire-1">
         <button class="play-button" id="easy">easy</button>
@@ -52,7 +59,7 @@
     <button onclick="returnToMenu()">MENU</button>
   </div>
   <div id="timer">
-    <p id="countdown">Num turns : <span id="easyTime">15</span><span id="mediumTime">10</span><span id="hardTime">5</span></p>
+    <p id="countdown" class="fugaz-one-regular game-name">Num turns : <span class="regular" id="easyTime">15</span><span class="regular" id="mediumTime">10</span><span class="hard" id="hardTime">5</span></p>
   </div>
 
   <div id="board1">
