@@ -64,7 +64,8 @@ function makeRulesVisible() {
 function selectDifficulty() {
     showSection(menuSection.modeSelection);
     // show difficulty select buttons visible
-    makeVisible('difficulty-section')
+    makeVisible('difficulty-section');
+    makeVisible('difficulty-title');
 }
 
  /** make section visible using id */
@@ -83,6 +84,8 @@ function returnToMenu(){
     makeVisible('front-page')
     // hide game screen
     makeInvisible('game-screen');
+    makeInvisible('instructions');
+    makeInvisible('difficulty-title');
     // restart all gameboards
     restart();
 }
@@ -273,6 +276,7 @@ function createEasyBoard(){
     makeInvisible('hardTime');
     makeInvisible('game-board2');
     makeInvisible('game-board3');
+    makeInvisible('difficulty-title');
 }
 
 function restartEasy(){
@@ -314,6 +318,7 @@ function createMediumBoard(){
     makeInvisible('hardTime')
     makeInvisible('game-board');
     makeInvisible('game-board3');
+    makeInvisible('difficulty-title');
 }
 
 function restartMedium(){
@@ -355,6 +360,7 @@ function createHardBoard(){
     makeInvisible('easyTime')
     makeInvisible('game-board2');
     makeInvisible('game-board');
+    makeInvisible('difficulty-title');
 }
 
 function restartHard(){
