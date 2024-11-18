@@ -86,12 +86,12 @@ button:active {
 
 #menu-section {
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
 #front-page {
     position: fixed;
-    padding-top: 100px;
 }
 
 #menu-title {
@@ -117,14 +117,17 @@ button:active {
 
 #instructions button {
     position: absolute;
-    margin-left: 20px;
     padding: 10px 15px 10px 17px;
-    top: 20px;
-    left: 20px
+    top: 50px;
+    left: 200px
 }
 
 #how-to-play {
     text-align:center;
+}
+
+#how-to-play .title {
+    font-size: 60px;
 }
 
 #how-to-play p {
@@ -144,15 +147,15 @@ button:active {
     position: fixed;
 }
 
+#back-btn {
+    padding: 10px 15px 10px 17px;
+}
+
 #difficulty-title{
-    font-size: 40px;
-    padding-top: 50px;
-    padding-bottom: 40px;
-    padding-right: 30px;
+    font-size: 50px;
 }
 
 .difficultySelect {
-    position: absolute;
     text-align: center;
 }
 
