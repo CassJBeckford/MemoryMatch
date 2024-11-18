@@ -133,7 +133,7 @@ function returnToMenu(){
 
 // gameplay
 /** https://www.geeksforgeeks.org/read-json-file-using-javascript/ Fetch API locates data */
-fetch("./data/cards.json")
+fetch("./js/cards.json")
   // promise chain
   // parse the data in JSON format
   .then((res) => res.json())
