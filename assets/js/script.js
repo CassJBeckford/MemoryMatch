@@ -21,7 +21,47 @@ let easyTime = 15;
 let mediumTime = 10;
 let hardTime = 5;
 
-let cards = [];
+let cards = [
+    {
+        "image": "./assets/img/cheeky.png",
+        "name": "cheeky"
+    },
+  
+    {
+        "image": "./assets/img/excited.png",
+        "name": "excited"
+    },
+   
+    {
+        "image": "./assets/img/flirting.png",
+        "name": "flirting"
+    },
+   
+    {
+        "image": "./assets/img/guilty.png",
+        "name": "guilty"
+    },
+  
+    {
+        "image": "./assets/img/nervous.png",
+        "name": "nervous"
+    },
+   
+    {
+        "image": "./assets/img/romantic.png",
+        "name": "romantic"
+    },
+   
+    {
+        "image": "./assets/img/shocked.png",
+        "name": "shocked"
+    },
+  
+    {
+        "image": "./assets/img/halo.png",
+        "name": "halo"
+    }
+];
 let difficulty = "";
 let moves = 0;
 let flipped = false;
