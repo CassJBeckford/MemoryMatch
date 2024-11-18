@@ -257,7 +257,7 @@ function shuffle(array) {
     return array;
   }
 
-  /** Flip cards on first and second move */
+/** Flip cards on first and second move */
 function flipCard() {
     // If flipped is equal to false nothing will execute
     if (flipped) return;
@@ -312,8 +312,9 @@ function unflipCards() {
     }, 1000);
 }
 
-/** Add cards function for third board */
+/** reset turn */
 function reset(){
+    // empty first and second move and set flipped back to false
     firstMove = null;
     secondMove = null;
     flipped = false;
@@ -321,6 +322,7 @@ function reset(){
 
 /** Add cards function for third board */
 function restart(){
+    // restart all gameboards
     restartEasy();
     restartMedium();
     restartHard();
