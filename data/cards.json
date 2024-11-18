@@ -1,41 +1,41 @@
 [
     {
-        "image": "../assets/img/cheeky.png",
+        "image": "./assets/img/cheeky.png",
         "name": "cheeky"
     },
   
     {
-        "image": "../assets/img/excited.png",
+        "image": "./assets/img/excited.png",
         "name": "excited"
     },
    
     {
-        "image": "../assets/img/flirting.png",
+        "image": "./assets/img/flirting.png",
         "name": "flirting"
     },
    
     {
-        "image": "../assets/img/guilty.png",
+        "image": "./assets/img/guilty.png",
         "name": "guilty"
     },
   
     {
-        "image": "../assets/img/nervous.png",
+        "image": "./assets/img/nervous.png",
         "name": "nervous"
     },
    
     {
-        "image": "../assets/img/romantic.png",
+        "image": "./assets/img/romantic.png",
         "name": "romantic"
     },
    
     {
-        "image": "../assets/img/shocked.png",
+        "image": "./assets/img/shocked.png",
         "name": "shocked"
     },
   
     {
-        "image": "../assets/img/halo.png",
+        "image": "./assets/img/halo.png",
         "name": "halo"
     }
 ]
