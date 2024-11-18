@@ -26,7 +26,17 @@ let cards = [
         "image": "./assets/img/cheeky.png",
         "name": "cheeky"
     },
+
+    {
+        "image": "./assets/img/cheeky.png",
+        "name": "cheeky"
+    },
   
+    {
+        "image": "./assets/img/excited.png",
+        "name": "excited"
+    },
+     
     {
         "image": "./assets/img/excited.png",
         "name": "excited"
@@ -36,7 +46,17 @@ let cards = [
         "image": "./assets/img/flirting.png",
         "name": "flirting"
     },
+
+    {
+        "image": "./assets/img/flirting.png",
+        "name": "flirting"
+    },
    
+    {
+        "image": "./assets/img/guilty.png",
+        "name": "guilty"
+    },
+
     {
         "image": "./assets/img/guilty.png",
         "name": "guilty"
@@ -46,7 +66,17 @@ let cards = [
         "image": "./assets/img/nervous.png",
         "name": "nervous"
     },
+
+    {
+        "image": "./assets/img/nervous.png",
+        "name": "nervous"
+    },
    
+    {
+        "image": "./assets/img/romantic.png",
+        "name": "romantic"
+    },
+     
     {
         "image": "./assets/img/romantic.png",
         "name": "romantic"
@@ -56,7 +86,17 @@ let cards = [
         "image": "./assets/img/shocked.png",
         "name": "shocked"
     },
+      
+    {
+        "image": "./assets/img/shocked.png",
+        "name": "shocked"
+    },
   
+    {
+        "image": "./assets/img/halo.png",
+        "name": "halo"
+    },
+
     {
         "image": "./assets/img/halo.png",
         "name": "halo"
@@ -140,7 +180,7 @@ fetch("./js/cards.json")
   // initialise cards array
   .then((data) => {
     // spread every value into cards array twice 
-    cards = [...data, ...data];
+    cards = [...data];
     // shuffle and generate cards
     shuffle(cards);
     addCards();
