@@ -166,7 +166,7 @@ function returnToMenu(){
     // hide game screen
     makeInvisible('game-screen');
     makeInvisible('instructions');
-    makeInvisible('difficulty-title');
+    makeInvisible('mode-selection');
     // restart all gameboards
     restart();
 }
@@ -259,7 +259,7 @@ function shuffle(array) {
 
 /** Flip cards on first and second move */
 function flipCard() {
-    // If flipped is equal to false nothing will execute
+    // If flipped is equal to true nothing will execute
     if (flipped) return;
     // If first move is already defined return as first move 
     if (this === firstMove) return;
@@ -340,12 +340,11 @@ function createEasyBoard(){
     makeVisible('game-screen');
     makeVisible('game-board')
     makeVisible('easyTime');
-    makeInvisible('difficulty-section');
+    makeInvisible('mode-selection');
     makeInvisible('mediumTime');
     makeInvisible('hardTime');
     makeInvisible('game-board2');
     makeInvisible('game-board3');
-    makeInvisible('difficulty-title');
 }
 
 function restartEasy(){
@@ -383,12 +382,11 @@ function createMediumBoard(){
     makeVisible('game-board2');
     makeVisible('game-screen');
     makeVisible('mediumTime');
-    makeInvisible('difficulty-section');
+    makeInvisible('mode-selection');
     makeInvisible('easyTime')
     makeInvisible('hardTime')
     makeInvisible('game-board');
     makeInvisible('game-board3');
-    makeInvisible('difficulty-title');
 }
 
 function restartMedium(){
@@ -426,12 +424,11 @@ function createHardBoard(){
     makeVisible('game-board3');
     makeVisible('game-screen');
     makeVisible('hardTime');
-    makeInvisible('difficulty-section');
+    makeInvisible('mode-selection');
     makeInvisible('mediumTime')
     makeInvisible('easyTime')
     makeInvisible('game-board2');
     makeInvisible('game-board');
-    makeInvisible('difficulty-title');
 }
 
 function restartHard(){
