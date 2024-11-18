@@ -1,131 +1,178 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Memory Match
 
-Welcome Cass Beckford,
+[view live project here](https://cassjbeckford.github.io/MemoryMatch/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Introduction 
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+Memory Match is a simple game relying on the users ability to uncover and remeber the placement of cards on a gameboard that can be matched together. 
+How many tries you have to uncover all the matches depends on the game mode chose. There are three game modes: easy; where the player has 15 trys to uncover all the matches, hard; in which the player only has 10 trys and impossible; only allowing the player 5 trys.
 
-## Gitpod Reminders
+## Features 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Menu 
 
-`python3 -m http.server`
+  - The menu consists of three seperate pages that the player can navigate through/around.
+  - The menu includes, the front page, how to play section and the difficulty select screen.
 
-A blue button should appear to click: _Make Public_,
+  #### Front page: 
 
-Another blue button should appear to click: _Open Browser_.
+  - The front page features the game title alongside two buttons that either lead the the difficulty select or how to play section.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+  #### How to play: 
 
-A blue button should appear to click: _Make Public_,
+  - The how to play section features an explanation on how to play the game as well as outlining all rules/paramters.
+  - This page also features a button in the top corner that can send the player back to the menu 
 
-Another blue button should appear to click: _Open Browser_.
+  #### difficulty select: 
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  - The difficulty select page features three buttons.
+  - the first button takes the player to the easy difficulty gameboard.
+  - the second button takes the player to the hard difficulty gameboard.
+  - the third button takes the player to the impossible difficulty gameboard.
 
-To log into the Heroku toolbelt CLI:
+### Gamescreen
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+  - The gamescreen features 2 buttons at the top of the page. One that can reset the gameboard and another that will take the player to the front page.
+  - Below that displays the number of turns allowed to the user, differing depending on the difficulty.
+  - The gamescre 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+## User Experience (UX)
 
-### Connecting your Mongo database
+-  #### User stories: 
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+    1. As a user, I dont want to spend loads of time learning how to play.
+    2. As a user, I want to be able to reset the game if I want to start again.
+    3. As a user, I want to know if I've won.
+    4. As a user, I want the game to look visiually pleasing. 
+    5. As a user, I want to be able to play this on different devices. 
+    7. As a user, I want access to different game modes depending on how I want to challenge myself.
 
-------
+## Design
 
-## Release History
+#### Colour Scheme
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+  - The main colours used are . 
+  - [coolors](https://coolors.co/): Coolors has been used to aid the desision the colour sceme for the project.
+  ### ![Text]
 
-**June 18, 2024,** Add Mongo back into template
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+#### Typography
 
-**May 28 2024:** Fix Mongo and Links installs
+  -   The main fonts on this site are .
 
-**April 26 2024:** Update node version to 16
+### Wireframes
 
-**September 20 2023:** Update Python version to 3.9.17.
+All wireframes were created using [balsamiq](https://balsamiq.com/)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- Main Page Wireframe - [view]
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- Difficulty Select Wireframe - [view]
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- How To Play Wireframe - [view]
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- Gamescreen Wireframe - [view]
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Languages Used
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Frameworks, Libraries & Programs Used
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+1. [Google Fonts:](https://fonts.google.com/)
+    - Google fonts was used for all text across the webpage
+2. [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+3. [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Testing
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Validator Testing 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+WC3 Markup Validator and W3C CSS Validator were used to validate the Project.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+HTML
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+CSS
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Further testing 
 
-------
+This website was tested on:
 
-## FAQ about the uptime script
+- Google Chrome, Firefox, Microsoft Edge and Safari.
+- The website was tested on multiple devices. Laptop, Ipad, Iphone 11 and Iphone 12.
+- Testing has been done to ensure all elements were linking correctly. 
 
-**Why have you added this script?**
+### Known bugs 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+### Fixed bugs 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## Development process
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- I started the program and repository by using the [gitpod template](https://github.com/Code-Institute-Org/gitpod-full-template) provided by the Code Insitute.  
+- Then I regularly staged my changes using the command `git add <filename>` and then committed the staged changes to my local repository using `git commit -m 'short descriptive message here'`. 
+- Finally, I would push the commits from my local repository up to the Github repository using the command `git push`.
+- With every push, Github automatically deploys my latest commit from the 'main' branch to the Github pages.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Deployment 
 
-**So….?**
+### Github Pages
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+The project was deployed to GitHub Pages using the following steps...
 
-**Can I opt out?**
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/CassJBeckford/CoreGym-MP1)
+2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+4. Under "Source", click the dropdown called "None" and select "Main Branch".
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now published site [link](https://github.com/CassJBeckford/CoreGym-MP1/deployments/activity_log?environment=github-pages) in the "GitHub Pages" section.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+
+### Forking the Github repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/CassJBeckford/CoreGym-MP1)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a local clone 
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/CassJBeckford/CoreGym-MP1)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
 
-**Anything more?**
+7. Press Enter. Your local clone will be created.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
 
----
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
-Happy coding!
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/CassJBeckford/CoreGym-MP1)
+
+## Credits
+
+### Code
+
+## Acknowledgments
+
+Special thanks to my Tutor- Miguel & Mentor- Moritz for their help and guidance throughout this project. 
