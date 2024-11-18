@@ -172,21 +172,6 @@ function returnToMenu(){
 }
 
 // gameplay
-/** https://www.geeksforgeeks.org/read-json-file-using-javascript/ Fetch API locates data */
-fetch("./js/cards.json")
-  // promise chain
-  // parse the data in JSON format
-  .then((res) => res.json())
-  // initialise cards array
-  .then((data) => {
-    // spread every value into cards array twice 
-    cards = [...data];
-    // shuffle and generate cards
-    shuffle(cards);
-    addCards();
-    addCards2();
-    addCards3();
-    });
 
 // gameplay functions
 /** Add cards function for first board */
@@ -196,7 +181,7 @@ function addCards() {
       // create card container and add a class 
       const cardElement = document.createElement("div");
       cardElement.classList.add("card-inner");
-      // Make it equal to a name value set in the JSON file
+      // Make it equal to a name value set in the cards array
       cardElement.setAttribute("data-name", card.name);
       // Inner structure of card container 
       // Template literals to set card image value to front of card
@@ -246,7 +231,7 @@ function addCards3() {
         <div class="card-back"></div>
       `;
       // append gameboard3 to board3 and append cards to gameboard3
-      board3.appendChild(gameboard3)
+      board3.appendChild(gameboard3);
       gameboard3.appendChild(cardElement);
       cardElement.addEventListener("click", flipCard);
     }
@@ -348,6 +333,7 @@ easyDifficulty.addEventListener("click", function () {
 })
 
 function createEasyBoard(){
+    shuffle(cards);
     addCards();
     makeVisible('game-screen');
     makeVisible('game-board')
@@ -390,6 +376,7 @@ mediumDifficulty .addEventListener("click", function () {
 })
 
 function createMediumBoard(){
+    shuffle(cards);
     addCards2();
     makeVisible('game-board2');
     makeVisible('game-screen');
@@ -432,6 +419,7 @@ hardDifficulty.addEventListener("click", function () {
 })
 
 function createHardBoard(){
+    shuffle(cards);
     addCards3();
     makeVisible('game-board3');
     makeVisible('game-screen');
