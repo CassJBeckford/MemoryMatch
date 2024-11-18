@@ -1,4 +1,5 @@
 // initialise global variables 
+
 const board1 = document.getElementById("board1")
 const board2 = document.getElementById("board2")
 const board3 = document.getElementById("board3")
@@ -121,7 +122,7 @@ function addCards() {
       // Template literals to set card image value to front of card
       cardElement.innerHTML = `
         <div class="card-front">
-          <img class="front-image" src=${card.image} />
+          <img class="front-image" src=${card.image}>
         </div>
         <div class="card-back"></div>
       `;
