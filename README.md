@@ -71,18 +71,19 @@ How many tries you have to uncover all the matches depends on the game mode chos
 
 All wireframes were created using [balsamiq](https://balsamiq.com/)
 
-- Main Page Wireframe - [view]
+- Main Page Wireframe - [view](docs/wireframes/front-page-WF.png)
 
-- Difficulty Select Wireframe - [view]
+- Difficulty Select Wireframe - [view](docs/wireframes/difficulty-select-WF.png)
 
-- How To Play Wireframe - [view]
+- How To Play Wireframe - [view](docs/wireframes/how-to-play-WF.png)
 
-- Gamescreen Wireframe - [view]
+- Gamescreen Wireframe - [view](docs/wireframes/game-screen-WF.png)
 
 ### Languages Used
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Javacript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries & Programs Used
 
