@@ -208,17 +208,17 @@ button {
 /*-------------------------- Colors */
 
 body {
-   background-color: #000000;
+    background-color: #000000;
 }
 
 p {
-   color: #00fbff;
+    color: #00fbff;
 }
 
 button {
-   background-color: #11005c;
-   color: #00fbff;
-   transition: 0.3s;
+    background-color: #11005c;
+    color: #00fbff;
+    transition: 0.3s;
 }
 
 button:hover {
