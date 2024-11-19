@@ -3,6 +3,9 @@
 /*-------------------------- Extra Small screens */
 @media screen and (min-width: 1px) and (max-width: 450px){
     /*-------------------------- Menu */
+    #front-page {
+        padding-bottom: 350px;
+    }
     #menu-title {
         text-align: center;
     }
@@ -10,10 +13,18 @@
         padding: 0 10px 0 10px;
     }
     /*-------------------------- How to play */
+    #instructions {
+        padding-bottom: 350px;
+    }
+
     #instructions button {
         margin-top: 200px;
     }
     /*-------------------------- Select difficulty */  
+    #mode-selection{
+        padding-bottom: 350px;
+    }
+
     #back-btn {
         margin-left: 10px;
     }
@@ -31,23 +42,26 @@
     }
     /*-------------------------- Game Board */
     #game-board {
-        grid-template-columns: repeat(4, 140px);
-        grid-template-rows: repeat(4, 140px);
+        grid-template-columns: repeat(2, 140px);
+        grid-template-rows: repeat(6, 140px);
     }
     
     #game-board2 {
-        grid-template-columns: repeat(4, 140px);
-        grid-template-rows: repeat(4, 140px);
+        grid-template-columns: repeat(2, 140px);
+        grid-template-rows: repeat(6, 140px);
     }
     
     #game-board3 {
-        grid-template-columns: repeat(4, 140px);
-        grid-template-rows: repeat(4, 140px);
+        grid-template-columns: repeat(2, 140px);
+        grid-template-rows: repeat(6, 140px);
     }
 }
 /*-------------------------- Small screens */
 @media screen and (min-width: 450px) and (max-width: 768px){
     /*-------------------------- Menu */
+    #front-page {
+        padding-bottom: 350px;
+    }
     #menu-title {
         text-align: center;
     }
@@ -55,10 +69,18 @@
         padding: 0 10px 0 10px;
     }
     /*-------------------------- How to play */
+    #instructions {
+        padding-bottom: 350px;
+    }
+
     #instructions button {
         margin-top: 200px;
     }
     /*-------------------------- Select difficulty */  
+    #mode-selection{
+        padding-bottom: 350px;
+    }
+
     #back-btn {
         margin-left: 10px;
     }
@@ -76,18 +98,18 @@
     }
     /*-------------------------- Game Board */
     #game-board {
-        grid-template-columns: repeat(4, 140px);
-        grid-template-rows: repeat(4, 140px);
+        grid-template-columns: repeat(2, 140px);
+        grid-template-rows: repeat(6, 140px);
     }
     
     #game-board2 {
-        grid-template-columns: repeat(4, 140px);
-        grid-template-rows: repeat(4, 140px);
+        grid-template-columns: repeat(2, 140px);
+        grid-template-rows: repeat(6, 140px);
     }
     
     #game-board3 {
-        grid-template-columns: repeat(4, 140px);
-        grid-template-rows: repeat(4, 140px);
+        grid-template-columns: repeat(2, 140px);
+        grid-template-rows: repeat(6, 140px);
     }
   
 }
