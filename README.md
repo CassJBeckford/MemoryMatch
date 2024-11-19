@@ -50,7 +50,6 @@ How many tries you have to uncover all the matches depends on the game mode chos
 
     1. As a user, I dont want to spend loads of time learning how to play.
     2. As a user, I want to be able to reset the game if I want to start again.
-    3. As a user, I want to know if I've won.
     4. As a user, I want the game to look visiually pleasing. 
     5. As a user, I want to be able to play this on different devices. 
     7. As a user, I want access to different game modes depending on how I want to challenge myself.
@@ -59,9 +58,9 @@ How many tries you have to uncover all the matches depends on the game mode chos
 
 #### Colour Scheme
 
-  - The main colours used are . 
+  - The main colours used are black, dark blue and light blue for all sections. Green, Orange and Red are used to indicate easy, medium or hard. 
   - [coolors](https://coolors.co/): Coolors has been used to aid the desision the colour sceme for the project.
-  ### ![Text]
+  ### ![Text](docs/screenshots/colors.png) 
 
 
 #### Typography
