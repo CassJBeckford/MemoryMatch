@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600');
 
+/*-------------------------- Small screens */
+@media screen and (min-width: 450px) and (max-width: 768px){
+    /*-------------------------- Menu */
+    #menu-title {
+        text-align: center;
+    }
+    #menu-buttons {
+        padding: 0 10px 0 10px;
+    }
+    /*-------------------------- How to play */
+    #instructions button {
+        margin-top: 200px;
+    }
+        
+    
+}
+
 /*-------------------------- General */
 
 /*------------ code taken from Google fonts https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap*/
@@ -32,11 +49,11 @@ button {
 /*-------------------------- Colors */
 
 body {
-   background-color: #fff95a;
+   background-color: #000000;
 }
 
 p {
-   color: #11005c;
+   color: #00fbff;
 }
 
 button {
@@ -69,6 +86,7 @@ button:active {
 }
 
 .hard {
+    color: #11005c;
     text-shadow: -1px 1px 0 #ff5e5e,
                   1px 1px 0 #ff5e5e,
                   1px -1px 0 #ff5e5e,
@@ -76,6 +94,7 @@ button:active {
 }
 
 .medium {
+    color: #11005c;
     text-shadow: -1px 1px 0 #ff9500,
                   1px 1px 0 #ff9500,
                   1px -1px 0 #ff9500,
@@ -90,6 +109,7 @@ button:active {
 }
 
 .regular {
+    color: #11005c;
     text-shadow: -1px 1px 0 #00ff22,
                   1px 1px 0 #00ff22,
                   1px -1px 0 #00ff22,
@@ -109,7 +129,7 @@ button:active {
 }
 
 #menu-title {
-    font-size: 40px;
+    font-size: 70px;
 }
 
 #menu-buttons {
@@ -123,17 +143,15 @@ button:active {
 /*-------------------------- How to play */
 
 #instructions {
-    
-    position: fixed;
+    position: absolute;
     justify-content: center;
     padding-top: 100px;
 }
 
 #instructions button {
-    position: absolute;
     padding: 10px 15px 10px 17px;
-    top: 50px;
-    left: 200px
+    margin-left: 60px;
+   
 }
 
 #how-to-play {
