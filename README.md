@@ -17,11 +17,13 @@ How many tries you have to uncover all the matches depends on the game mode chos
   #### Front page: 
 
   - The front page features the game title alongside two buttons that either lead the the difficulty select or how to play section.
+  ![UX testing](docs/screenshots/front-page.png)
 
   #### How to play: 
 
   - The how to play section features an explanation on how to play the game as well as outlining all rules/paramters.
-  - This page also features a button in the top corner that can send the player back to the menu 
+  - This page also features a button in the top corner that can send the player back to the menu.
+  ![UX testing](docs/screenshots/how-to-play.png) 
 
   #### difficulty select: 
 
@@ -29,12 +31,17 @@ How many tries you have to uncover all the matches depends on the game mode chos
   - the first button takes the player to the easy difficulty gameboard.
   - the second button takes the player to the hard difficulty gameboard.
   - the third button takes the player to the impossible difficulty gameboard.
+  ![UX testing](docs/screenshots/difficulty-select.png)
 
 ### Gamescreen
 
   - The gamescreen features 2 buttons at the top of the page. One that can reset the gameboard and another that will take the player to the front page.
-  - Below that displays the number of turns allowed to the user, differing depending on the difficulty.
-  - The gamescre 
+  - The gamescren features 16 cards that can be turned over.
+  ![UX testing](docs/screenshots/game-screen.png)
+  - The number of turns allowed to the useris also displayed, differing depending on the difficulty.
+  ![UX testing](docs/screenshots/easy-timer.png)
+  ![UX testing](docs/screenshots/medium-timer.png)
+  ![UX testing](docs/screenshots/hard-timer.png)
 
 ## User Experience (UX)
 
