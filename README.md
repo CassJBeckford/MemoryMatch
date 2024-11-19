@@ -1,6 +1,7 @@
 # Memory Match
 
-[view live project here](https://cassjbeckford.github.io/MemoryMatch/)
+## [view live project here](https://cassjbeckford.github.io/MemoryMatch/)
+## ![Text](docs/responsive/screen-types.png)
 
 ## Introduction 
 
