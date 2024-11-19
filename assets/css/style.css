@@ -146,6 +146,12 @@
 }
 
 /*-------------------------- large screens */
+@media screen and (min-width: 930px) and (max-width: 1200px){
+    #front-page {
+        margin-bottom: 400px;
+    }
+
+}
 @media screen and (min-width: 1200px) and (max-width: 2000px){
     /*-------------------------- Select difficulty */ 
     #easy {
