@@ -14,7 +14,7 @@
     }
     /*-------------------------- How to play */
     #instructions {
-        margin-bottom: 200px;
+        margin-bottom: 280px;
     }
 
     #instructions button {
@@ -116,9 +116,6 @@
 
 /*-------------------------- medium screens */
 @media screen and (min-width: 768px) and (max-width: 1200px){
-    #front-page {
-        margin-top: 550px;
-    }
     /*-------------------------- Select difficulty */  
     #easy {
         padding: 40px 300px 40px 300px;
