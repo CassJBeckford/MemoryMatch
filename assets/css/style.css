@@ -4,7 +4,7 @@
 @media screen and (min-width: 1px) and (max-width: 450px){
     /*-------------------------- Menu */
     #front-page {
-        margin-bottom: 800px;
+        margin-bottom: 850px;
     }
     #menu-title {
         text-align: center;
@@ -14,6 +14,7 @@
     }
     /*-------------------------- How to play */
     #instructions {
+        margin-bottom: 200px;
     }
 
     #instructions button {
@@ -21,7 +22,7 @@
     }
     /*-------------------------- Select difficulty */  
     #mode-selection{
-        margin-bottom: 800px;
+        margin-bottom: 600px;
     }
 
     #back-btn {
@@ -116,7 +117,7 @@
 /*-------------------------- medium screens */
 @media screen and (min-width: 768px) and (max-width: 1200px){
     #front-page {
-        margin-top: 200px;
+        margin-top: 550px;
     }
     /*-------------------------- Select difficulty */  
     #easy {
