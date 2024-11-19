@@ -4,7 +4,7 @@
 @media screen and (min-width: 1px) and (max-width: 450px){
     /*-------------------------- Menu */
     #front-page {
-        margin-bottom: 650px;
+        margin-bottom: 800px;
     }
     #menu-title {
         text-align: center;
@@ -21,6 +21,7 @@
     }
     /*-------------------------- Select difficulty */  
     #mode-selection{
+        margin-bottom: 800px;
     }
 
     #back-btn {
@@ -114,6 +115,9 @@
 
 /*-------------------------- medium screens */
 @media screen and (min-width: 768px) and (max-width: 1200px){
+    #front-page {
+        margin-top: 200px;
+    }
     /*-------------------------- Select difficulty */  
     #easy {
         padding: 40px 300px 40px 300px;
