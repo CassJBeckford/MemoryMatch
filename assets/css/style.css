@@ -29,9 +29,25 @@
     #hard {
         padding: 40px 162px 40px 162px;
     }
+    /*-------------------------- Game Board */
+    #game-board {
+        grid-template-columns: repeat(2, 140px);
+        grid-template-rows: repeat(8, 140px);
+    }
+    
+    #game-board2 {
+        grid-template-columns: repeat(2, 140px);
+        grid-template-rows: repeat(8, 140px);
+    }
+    
+    #game-board3 {
+        grid-template-columns: repeat(2, 140px);
+        grid-template-rows: repeat(8, 140px);
+    }
   
 }
 
+/*-------------------------- medium screens */
 @media screen and (min-width: 768px) and (max-width: 1200px){
     /*-------------------------- Select difficulty */  
     #easy {
@@ -45,8 +61,24 @@
     #hard {
         padding: 40px 262px 40px 262px;
     }
+    /*-------------------------- Game Board */
+    #game-board {
+        grid-template-columns: repeat(4, 140px);
+        grid-template-rows: repeat(4, 140px);
+    }
+    
+    #game-board2 {
+        grid-template-columns: repeat(4, 140px);
+        grid-template-rows: repeat(4, 140px);
+    }
+    
+    #game-board3 {
+        grid-template-columns: repeat(4, 140px);
+        grid-template-rows: repeat(4, 140px);
+    }
 }
 
+/*-------------------------- large screens */
 @media screen and (min-width: 1200px) and (max-width: 2000px){
     /*-------------------------- Select difficulty */ 
     #easy {
@@ -59,6 +91,21 @@
     
     #hard {
         padding: 40px 362px 40px 362px;
+    }
+    /*-------------------------- Game Board */
+    #game-board {
+        grid-template-columns: repeat(4, 140px);
+        grid-template-rows: repeat(4, 140px);
+    }
+    
+    #game-board2 {
+        grid-template-columns: repeat(4, 140px);
+        grid-template-rows: repeat(4, 140px);
+    }
+    
+    #game-board3 {
+        grid-template-columns: repeat(4, 140px);
+        grid-template-rows: repeat(4, 140px);
     }
 }
 
@@ -258,23 +305,17 @@ button:active {
 
 #game-board {
     display: grid;
-    grid-template-columns: repeat(4, 140px);
-    grid-template-rows: repeat(4, 140px);
     grid-gap: 20px;
 
 }
 
 #game-board2 {
     display: grid;
-    grid-template-columns: repeat(4, 140px);
-    grid-template-rows: repeat(4, 140px);
     grid-gap: 20px;
 }
 
 #game-board3 {
     display: grid;
-    grid-template-columns: repeat(4, 140px);
-    grid-template-rows: repeat(4, 140px);
     grid-gap: 20px;
 }
 
