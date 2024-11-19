@@ -1,5 +1,50 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600');
 
+/*-------------------------- Extra Small screens */
+@media screen and (min-width: 1px) and (max-width: 450px){
+    /*-------------------------- Menu */
+    #menu-title {
+        text-align: center;
+    }
+    #menu-buttons {
+        padding: 0 10px 0 10px;
+    }
+    /*-------------------------- How to play */
+    #instructions button {
+        margin-top: 200px;
+    }
+    /*-------------------------- Select difficulty */  
+    #back-btn {
+        margin-left: 10px;
+    }
+
+    #easy {
+        padding: 40px 200px 40px 200px;
+    }
+    
+    #medium {
+        padding: 40px 199px 40px 199px;
+    }
+    
+    #hard {
+        padding: 40px 162px 40px 162px;
+    }
+    /*-------------------------- Game Board */
+    #game-board {
+        grid-template-columns: repeat(4, 140px);
+        grid-template-rows: repeat(4, 140px);
+    }
+    
+    #game-board2 {
+        grid-template-columns: repeat(4, 140px);
+        grid-template-rows: repeat(4, 140px);
+    }
+    
+    #game-board3 {
+        grid-template-columns: repeat(4, 140px);
+        grid-template-rows: repeat(4, 140px);
+    }
+}
 /*-------------------------- Small screens */
 @media screen and (min-width: 450px) and (max-width: 768px){
     /*-------------------------- Menu */
@@ -31,18 +76,18 @@
     }
     /*-------------------------- Game Board */
     #game-board {
-        grid-template-columns: repeat(2, 140px);
-        grid-template-rows: repeat(8, 140px);
+        grid-template-columns: repeat(4, 140px);
+        grid-template-rows: repeat(4, 140px);
     }
     
     #game-board2 {
-        grid-template-columns: repeat(2, 140px);
-        grid-template-rows: repeat(8, 140px);
+        grid-template-columns: repeat(4, 140px);
+        grid-template-rows: repeat(4, 140px);
     }
     
     #game-board3 {
-        grid-template-columns: repeat(2, 140px);
-        grid-template-rows: repeat(8, 140px);
+        grid-template-columns: repeat(4, 140px);
+        grid-template-rows: repeat(4, 140px);
     }
   
 }
