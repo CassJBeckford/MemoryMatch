@@ -96,17 +96,23 @@ All wireframes were created using [balsamiq](https://balsamiq.com/)
 
 ## Testing
 
+### DevTools
+
+Lighthouse results
+
+## ![Text](docs/testing/lighthouse.png)
+
 ### Validator Testing 
 
 WC3 Markup Validator and W3C CSS Validator were used to validate the Project.
 
 HTML
 
-## ![Text](docs/validators/html.png)
+## ![Text](docs/testing/html.png)
 
 CSS
 
-## ![Text](docs/validators/css.png)
+## ![Text](docs/testing/css.png)
 
 ### Further testing 
 
@@ -118,9 +124,11 @@ This website was tested on:
 
 ### Known bugs 
 
-- No known bugs.
+- Delays with hiding elements when navigating between screens.
 
 ### Fixed bugs 
+
+- Initially placed an array with the card images/names in a JSON file and accessed them through a promise in the js file, as a result the images only appeard in the live server. Instead I decided to place the array in the variable cards in the script file and access them from there.
 
 ## Development process
 
@@ -190,6 +198,8 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 - Creating cards with the flip effect taken from [W3Scool](https://www.w3schools.com/howto/howto_css_flip_card.asp)
 - General coding niggles helped by [W3School](https://www.w3schools.com/)
 - Guidance for shuffling the cards on my gamescreen taken from [geeksforgeeks](https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/)
+- Guidance on how to flip cards using js taken from [Medium](https://jefferson-cuartas.medium.com/how-to-create-a-flip-card-effect-using-javascript-767dd945210c)
+- Help with creating the timer from [SheCodes](https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript)
 
 
 ## Acknowledgments
