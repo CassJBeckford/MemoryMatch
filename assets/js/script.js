@@ -102,8 +102,6 @@ let cards = [
         "name": "halo"
     }
 ];
-let difficulty = "";
-let moves = 0;
 let flipped = false;
 let firstMove, secondMove;
 
@@ -151,18 +149,18 @@ function selectDifficulty() {
 
  /** make section visible using id */
 function makeVisible(id){
-    document.getElementById(id).classList.remove("hidden")
+    document.getElementById(id).classList.remove("hidden");
 }
 
 /** make section Invisible using id */
 function makeInvisible(id){
-    document.getElementById(id).classList.add("hidden")
+    document.getElementById(id).classList.add("hidden");
 }
 
  /** make menu section visible using id */
 function returnToMenu(){
     // make menu visible
-    makeVisible('front-page')
+    makeFrontPageVisible();
     // hide game screen
     makeInvisible('game-screen');
     makeInvisible('instructions');
@@ -192,7 +190,7 @@ function addCards() {
         <div class="card-back"></div>
       `;
       // append gameboard to board1 and append cards to gameboard 
-      board1.appendChild(gameboard)
+      board1.appendChild(gameboard);
       gameboard.appendChild(cardElement);
       // add event listener to flip card elements
       cardElement.addEventListener("click", flipCard);
@@ -212,7 +210,7 @@ function addCards2() {
         <div class="card-back"></div>
       `;
       // append gameboard2 to board2 and append cards to gameboard2
-      board2.appendChild(gameboard2)
+      board2.appendChild(gameboard2);
       gameboard2.appendChild(cardElement);
       cardElement.addEventListener("click", flipCard);
     }
@@ -236,6 +234,7 @@ function addCards3() {
       cardElement.addEventListener("click", flipCard);
     }
 }
+
 /** Fisher-Yates shuffle algorithm https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/ */
 function shuffle(array) {
     // Declare variables
@@ -255,7 +254,7 @@ function shuffle(array) {
       array[randomIndex] = temporaryValue;
     }
     return array;
-  }
+}
 
 /** Flip cards on first and second move */
 function flipCard() {
@@ -329,17 +328,21 @@ function restart(){
 }
 
 // easy gameplay functions
+/** Add event listener to difficulty select button */
 easyDifficulty.addEventListener("click", function () {
-    difficulty = "easy";
     createEasyBoard();
 })
 
+/** create easy gameboard */
 function createEasyBoard(){
+    // add and shuffle cards
     shuffle(cards);
     addCards();
+    // make all easy gameboard components visible
     makeVisible('game-screen');
-    makeVisible('game-board')
+    makeVisible('game-board');
     makeVisible('easyTime');
+    // hide all medium and hard gameboard components 
     makeInvisible('mode-selection');
     makeInvisible('mediumTime');
     makeInvisible('hardTime');
@@ -347,35 +350,43 @@ function createEasyBoard(){
     makeInvisible('game-board3');
 }
 
+/** Restart easy gameboard */
 function restartEasy(){
-    easyCountdown.innerHTML = 15
-    easyTime = 15
+    // restart counter 
+    easyCountdown.innerHTML = 15;
+    easyTime = 15;
+    // clear gameboard then add and shuffle cards
     let gameboard = document.getElementById("game-board");
     gameboard.innerHTML = "";
     addCards();
     shuffle(cards); 
 }
-/**  */
+
+/** Turn counter */
 function updateEasyCountdown(){
+    // if a pair of cards unflip and the counter is larger than zero, count down once. 
     if(flipped && easyTime > 0){
         let seconds = easyTime;
         easyCountdown.innerHTML = `${seconds}`;
         easyTime--;
     }
+    // if counter reaches zero reset board
     else if(easyTime === 0){
         restartEasy();
     }
+    // else keep counting down
     else{
         easyCountdown.innerHTML = easyTime;  
     }
 }
 
 // medium gameplay functions
-mediumDifficulty .addEventListener("click", function () {
-    difficulty = "medium";
+/** Add event listener to difficulty select button */
+mediumDifficulty.addEventListener("click", function () {
     createMediumBoard();
 })
 
+/** create medium gameboard */
 function createMediumBoard(){
     shuffle(cards);
     addCards2();
@@ -383,41 +394,44 @@ function createMediumBoard(){
     makeVisible('game-screen');
     makeVisible('mediumTime');
     makeInvisible('mode-selection');
-    makeInvisible('easyTime')
-    makeInvisible('hardTime')
+    makeInvisible('easyTime');
+    makeInvisible('hardTime');
     makeInvisible('game-board');
     makeInvisible('game-board3');
 }
 
+/** Restart medium gameboard */
 function restartMedium(){
-    mediumCountdown.innerHTML = 10
-    mediumTime = 10
+    mediumCountdown.innerHTML = 10;
+    mediumTime = 10;
     let gameboard2 = document.getElementById("game-board2");
     gameboard2.innerHTML = "";
     addCards2();
     shuffle(cards);
 }
-/**  */
+
+/** Turn counter */
 function updateMediumCountdown(){
     if(flipped && mediumTime > 0){
         let seconds = mediumTime;
-        mediumCountdown.innerHTML = `${seconds}`
+        mediumCountdown.innerHTML = `${seconds}`;
         mediumTime--;
     }
     else if(mediumTime === 0){
         restartMedium();
     }
         else{
-        mediumCountdown.innerHTML = mediumTime    
+        mediumCountdown.innerHTML = mediumTime;
     }
 }
 
 // hard gameplay functions
+/** Add event listener to difficulty select button */
 hardDifficulty.addEventListener("click", function () {
-    difficulty = "hard";
     createHardBoard();
 })
 
+/** create hard gameboard */
 function createHardBoard(){
     shuffle(cards);
     addCards3();
@@ -425,33 +439,35 @@ function createHardBoard(){
     makeVisible('game-screen');
     makeVisible('hardTime');
     makeInvisible('mode-selection');
-    makeInvisible('mediumTime')
-    makeInvisible('easyTime')
+    makeInvisible('mediumTime');
+    makeInvisible('easyTime');
     makeInvisible('game-board2');
     makeInvisible('game-board');
 }
 
+/** Restart hard gameboard */
 function restartHard(){
-    hardCountdown.innerHTML = 5
-    hardTime = 5
+    hardCountdown.innerHTML = 5;
+    hardTime = 5;
     let gameboard3 = document.getElementById("game-board3");
     gameboard3.innerHTML = "";
     addCards3();
     shuffle(cards);
      
 }
-/**  */
+
+/** Turn counter */
 function updateHardCountdown(){
     if(flipped && hardTime > 0){
         let seconds = hardTime;
-        hardCountdown.innerHTML = `${seconds}`
+        hardCountdown.innerHTML = `${seconds}`;
         hardTime--;
     }
     else if(hardTime === 0){
         restartHard();
     }
         else{
-        hardCountdown.innerHTML = hardTime    
+        hardCountdown.innerHTML = hardTime;    
     } 
 }
 
