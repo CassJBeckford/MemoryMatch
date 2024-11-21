@@ -102,7 +102,11 @@ WC3 Markup Validator and W3C CSS Validator were used to validate the Project.
 
 HTML
 
+## ![Text](docs/validators/html.png)
+
 CSS
+
+## ![Text](docs/validators/css.png)
 
 ### Further testing 
 
@@ -114,6 +118,7 @@ This website was tested on:
 
 ### Known bugs 
 
+- No known bugs.
 
 ### Fixed bugs 
 
@@ -180,6 +185,12 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 ## Credits
 
 ### Code
+
+- [Favicon.io](https://fontawesome.com/) images were used for the emoji memory cards.
+- Creating cards with the flip effect taken from [W3Scool]https://www.w3schools.com/howto/howto_css_flip_card.asp
+- General coding niggles helped by [W3School](https://www.w3schools.com/)
+- Guidance for shuffling the cards on my gamescreen taken from [geeksforgeeks]https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/
+
 
 ## Acknowledgments
 
