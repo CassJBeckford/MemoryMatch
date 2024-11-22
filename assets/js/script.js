@@ -20,6 +20,9 @@ setInterval(updateHardCountdown, 1000);
 let easyTime = 15;
 let mediumTime = 10;
 let hardTime = 5;
+let score = 0;
+let mediumScore = 0;
+let hardScore = 0;
 
 let cards = [
     {
@@ -296,6 +299,9 @@ function freezeCards() {
     // Remove abilty to flip card cards
     firstMove.removeEventListener("click", flipCard);
     secondMove.removeEventListener("click", flipCard);
+    score++;
+    mediumScore++;
+    hardScore++;
     // end turn
     reset();
 }
@@ -353,6 +359,7 @@ function createEasyBoard(){
 /** Restart easy gameboard */
 function restartEasy(){
     // restart counter 
+    score = 0;
     easyCountdown.innerHTML = 15;
     easyTime = 15;
     // clear gameboard then add and shuffle cards
@@ -373,6 +380,10 @@ function updateEasyCountdown(){
     // if counter reaches zero reset board
     else if(easyTime === 0){
         restartEasy();
+    }
+    // if player reaches max score then display victory message
+    else if (score === 8){
+        easyCountdown.innerHTML = 'LEVEL COMPLETE!';
     }
     // else keep counting down
     else{
@@ -402,6 +413,7 @@ function createMediumBoard(){
 
 /** Restart medium gameboard */
 function restartMedium(){
+    mediumScore = 0;
     mediumCountdown.innerHTML = 10;
     mediumTime = 10;
     let gameboard2 = document.getElementById("game-board2");
@@ -420,7 +432,10 @@ function updateMediumCountdown(){
     else if(mediumTime === 0){
         restartMedium();
     }
-        else{
+    else if (mediumScore === 8){
+        mediumCountdown.innerHTML = 'LEVEL COMPLETE!';
+    }
+    else{
         mediumCountdown.innerHTML = mediumTime;
     }
 }
@@ -447,6 +462,7 @@ function createHardBoard(){
 
 /** Restart hard gameboard */
 function restartHard(){
+    hardScore = 0;
     hardCountdown.innerHTML = 5;
     hardTime = 5;
     let gameboard3 = document.getElementById("game-board3");
@@ -466,7 +482,10 @@ function updateHardCountdown(){
     else if(hardTime === 0){
         restartHard();
     }
-        else{
+    else if (hardScore === 8){
+        hardCountdown.innerHTML = 'LEVEL COMPLETE!';
+    }
+    else{
         hardCountdown.innerHTML = hardTime;    
     } 
 }
