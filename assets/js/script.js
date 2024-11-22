@@ -1,8 +1,8 @@
 // initialise global variables 
 
-const board1 = document.getElementById("board1")
-const board2 = document.getElementById("board2")
-const board3 = document.getElementById("board3")
+const board1 = document.getElementById("board1");
+const board2 = document.getElementById("board2");
+const board3 = document.getElementById("board3");
 const gameboard = document.getElementById("game-board");
 const gameboard2 = document.getElementById("game-board2");
 const gameboard3 = document.getElementById("game-board3");
@@ -331,7 +331,7 @@ function restart(){
 /** Add event listener to difficulty select button */
 easyDifficulty.addEventListener("click", function () {
     createEasyBoard();
-})
+});
 
 /** create easy gameboard */
 function createEasyBoard(){
@@ -384,7 +384,7 @@ function updateEasyCountdown(){
 /** Add event listener to difficulty select button */
 mediumDifficulty.addEventListener("click", function () {
     createMediumBoard();
-})
+});
 
 /** create medium gameboard */
 function createMediumBoard(){
@@ -429,7 +429,7 @@ function updateMediumCountdown(){
 /** Add event listener to difficulty select button */
 hardDifficulty.addEventListener("click", function () {
     createHardBoard();
-})
+});
 
 /** create hard gameboard */
 function createHardBoard(){
