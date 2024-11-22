@@ -5,8 +5,8 @@
 
 ## Introduction 
 
-Memory Match is a simple game relying on the users ability to uncover and remeber the placement of cards on a gameboard that can be matched together. 
-How many tries you have to uncover all the matches depends on the game mode chose. There are three game modes: easy; where the player has 15 trys to uncover all the matches, hard; in which the player only has 10 trys and impossible; only allowing the player 5 trys.
+Memory Match is a simple game relying on the users ability to uncover and remember the placement of cards on a gameboard that can be matched together. 
+How many tries you have to uncover all the matches depends on the game mode chosen. There are three game modes: easy; where the player has 15 trys to uncover all the matches, hard; in which the player only has 10 trys and impossible; only allowing the player 5 trys.
 
 ## Features 
 
