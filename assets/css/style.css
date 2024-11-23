@@ -4,7 +4,7 @@
 @media screen and (min-width: 1px) and (max-width: 450px){
     /*-------------------------- Menu */
     #front-page {
-        margin-bottom: 850px;
+        margin-top: 400px;
     }
     #menu-title {
         text-align: center;
@@ -14,7 +14,7 @@
     }
     /*-------------------------- How to play */
     #instructions {
-        margin-bottom: 280px;
+        margin-top: 250px;
     }
 
     #instructions button {
@@ -22,7 +22,7 @@
     }
     /*-------------------------- Select difficulty */  
     #mode-selection{
-        margin-bottom: 600px;
+        margin-top: 250px;
     }
 
     #back-btn {
@@ -42,25 +42,21 @@
     }
     /*-------------------------- Game Board */
     #game-board {
-        grid-template-columns: repeat(2, 140px);
-        grid-template-rows: repeat(8, 140px);
+        grid-gap: 0px;
+        grid-template-columns: repeat(4, 105px);
+        grid-template-rows: repeat(4, 105px);
     }
-    
-    #game-board2 {
-        grid-template-columns: repeat(2, 140px);
-        grid-template-rows: repeat(8, 140px);
-    }
-    
-    #game-board3 {
-        grid-template-columns: repeat(2, 140px);
-        grid-template-rows: repeat(8, 140px);
+
+    .card-inner {
+        width: 80px;
+        height: 80px;
     }
 }
 /*-------------------------- Small screens */
 @media screen and (min-width: 450px) and (max-width: 768px){
     /*-------------------------- Menu */
     #front-page {
-        margin-bottom: 550px;
+        margin-top: 200px;
     }
     #menu-title {
         text-align: center;
@@ -70,7 +66,7 @@
     }
     /*-------------------------- How to play */
     #instructions {
-        margin-bottom: 550px;
+        margin-top: 200px;
     }
 
     #instructions button {
@@ -78,7 +74,7 @@
     }
     /*-------------------------- Select difficulty */  
     #mode-selection{
-        margin-bottom: 550px;
+        margin-top: 200px;
     }
 
     #back-btn {
@@ -98,22 +94,16 @@
     }
     /*-------------------------- Game Board */
     #game-board {
-        grid-template-columns: repeat(2, 140px);
-        grid-template-rows: repeat(8, 140px);
+        grid-gap: 0px;
+        grid-template-columns: repeat(4, 113px);
+        grid-template-rows: repeat(4, 113px);
     }
-    
-    #game-board2 {
-        grid-template-columns: repeat(2, 140px);
-        grid-template-rows: repeat(8, 140px);
-    }
-    
-    #game-board3 {
-        grid-template-columns: repeat(2, 140px);
-        grid-template-rows: repeat(8, 140px);
-    }
-  
-}
 
+    .card-inner {
+        width: 100px;
+        height: 100px;
+    }
+}
 /*-------------------------- medium screens */
 @media screen and (min-width: 768px) and (max-width: 1200px){
     /*-------------------------- Select difficulty */  
@@ -130,21 +120,16 @@
     }
     /*-------------------------- Game Board */
     #game-board {
+        grid-gap: 20px;
         grid-template-columns: repeat(4, 140px);
         grid-template-rows: repeat(4, 140px);
     }
-    
-    #game-board2 {
-        grid-template-columns: repeat(4, 140px);
-        grid-template-rows: repeat(4, 140px);
-    }
-    
-    #game-board3 {
-        grid-template-columns: repeat(4, 140px);
-        grid-template-rows: repeat(4, 140px);
+
+    .card-inner {
+        width: 140px;
+        height: 100%;
     }
 }
-
 /*-------------------------- large screens */
 @media screen and (min-width: 1200px) and (max-width: 2000px){
     /*-------------------------- Select difficulty */ 
@@ -159,23 +144,19 @@
     #hard {
         padding: 40px 362px 40px 362px;
     }
-    /*-------------------------- Game Board */
-    #game-board {
+
+     /*-------------------------- Game Board */
+     #game-board {
+        grid-gap: 20px;
         grid-template-columns: repeat(4, 140px);
         grid-template-rows: repeat(4, 140px);
     }
-    
-    #game-board2 {
-        grid-template-columns: repeat(4, 140px);
-        grid-template-rows: repeat(4, 140px);
-    }
-    
-    #game-board3 {
-        grid-template-columns: repeat(4, 140px);
-        grid-template-rows: repeat(4, 140px);
+
+     .card-inner {
+        width: 140px;
+        height: 100%;
     }
 }
-
 /*-------------------------- General */
 
 /*------------ code taken from Google fonts https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap*/
@@ -183,7 +164,7 @@
     font-family: "Fugaz One", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
+}
 /*------------- */
 
 button {
@@ -360,29 +341,8 @@ button:active {
 }
 
 #game-board {
-    position: absolute;
+    display: grid;
     top: 200px;
-}
-
-#game-board3 {
-    position: absolute;
-    top: 200px;
-}
-
-#game-board {
-    display: grid;
-    grid-gap: 20px;
-
-}
-
-#game-board2 {
-    display: grid;
-    grid-gap: 20px;
-}
-
-#game-board3 {
-    display: grid;
-    grid-gap: 20px;
 }
 
 #time{
@@ -393,17 +353,10 @@ button:active {
     font-size: 25px;
 }
 
-#mediumTime {
-    position: absolute;
-    left: 170px;
-}
-
 /*------------ Flip effect https://www.w3schools.com/howto/howto_css_flip_card.asp*/
 
 .card-inner {
     position: relative;
-    width: 140px;
-    height: 100%;
     background-color: white;
     transition: transform 0.8s;
     transform-style: preserve-3d;
@@ -424,7 +377,6 @@ button:active {
     height: 100%;
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
-    border-radius: 10px;
 }
   
 .card-inner .card-front {
@@ -439,6 +391,8 @@ button:active {
     cursor: pointer;
     background-color: #11005c;
     color: white;
+    border-style: solid;
+    border-color: #00fbff;
 }
 
 .card-inner .card-front {
