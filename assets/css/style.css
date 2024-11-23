@@ -4,7 +4,7 @@
 @media screen and (min-width: 1px) and (max-width: 450px){
     /*-------------------------- Menu */
     #front-page {
-        margin-top: 400px;
+        margin-top: 200px;
     }
     #menu-title {
         text-align: center;
@@ -43,13 +43,13 @@
     /*-------------------------- Game Board */
     #game-board {
         grid-gap: 0px;
-        grid-template-columns: repeat(4, 105px);
-        grid-template-rows: repeat(4, 105px);
+        grid-template-columns: repeat(4, 95px);
+        grid-template-rows: repeat(4, 95px);
     }
 
     .card-inner {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }
 }
 /*-------------------------- Small screens */
