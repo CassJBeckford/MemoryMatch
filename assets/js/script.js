@@ -1,28 +1,17 @@
 // initialise global variables 
 
 const board1 = document.getElementById("board1");
-const board2 = document.getElementById("board2");
-const board3 = document.getElementById("board3");
 const gameboard = document.getElementById("game-board");
-const gameboard2 = document.getElementById("game-board2");
-const gameboard3 = document.getElementById("game-board3");
 const easyDifficulty = document.getElementById('easy');
 const mediumDifficulty = document.getElementById('medium');
 const hardDifficulty = document.getElementById('hard');
 
-const easyCountdown = document.getElementById("easyTime");
-setInterval(updateEasyCountdown, 1000);
-const mediumCountdown = document.getElementById("mediumTime");
-setInterval(updateMediumCountdown, 1000);
-const hardCountdown = document.getElementById("hardTime");
-setInterval(updateHardCountdown, 1000);
+const countdown = document.getElementById("time");
+setInterval(updateCountdown, 1000);
 
-let easyTime = 15;
-let mediumTime = 10;
-let hardTime = 5;
+let difficulty = "";
+let counter = 15;
 let score = 0;
-let mediumScore = 0;
-let hardScore = 0;
 
 let cards = [
     {
@@ -193,47 +182,8 @@ function addCards() {
         <div class="card-back"></div>
       `;
       // append gameboard to board1 and append cards to gameboard 
-      board1.appendChild(gameboard);
       gameboard.appendChild(cardElement);
       // add event listener to flip card elements
-      cardElement.addEventListener("click", flipCard);
-    }
-}
-
-/** Add cards function for second board */
-function addCards2() {
-    for (let card of cards) {
-      const cardElement = document.createElement("div");
-      cardElement.classList.add("card-inner");
-      cardElement.setAttribute("data-name", card.name);
-      cardElement.innerHTML = `
-        <div class="card-front">
-          <img class="front-image" src=${card.image} />
-        </div>
-        <div class="card-back"></div>
-      `;
-      // append gameboard2 to board2 and append cards to gameboard2
-      board2.appendChild(gameboard2);
-      gameboard2.appendChild(cardElement);
-      cardElement.addEventListener("click", flipCard);
-    }
-}
-
-/** Add cards function for third board */
-function addCards3() {
-    for (let card of cards) {
-      const cardElement = document.createElement("div");
-      cardElement.classList.add("card-inner");
-      cardElement.setAttribute("data-name", card.name);
-      cardElement.innerHTML = `
-        <div class="card-front">
-          <img class="front-image" src=${card.image} />
-        </div>
-        <div class="card-back"></div>
-      `;
-      // append gameboard3 to board3 and append cards to gameboard3
-      board3.appendChild(gameboard3);
-      gameboard3.appendChild(cardElement);
       cardElement.addEventListener("click", flipCard);
     }
 }
@@ -300,8 +250,6 @@ function freezeCards() {
     firstMove.removeEventListener("click", flipCard);
     secondMove.removeEventListener("click", flipCard);
     score++;
-    mediumScore++;
-    hardScore++;
     // end turn
     reset();
 }
@@ -328,10 +276,47 @@ function reset(){
 /** Add cards function for third board */
 function restart(){
     // restart all gameboards
-    restartEasy();
-    restartMedium();
-    restartHard();
+    let gameboard = document.getElementById('game-board');
+    gameboard.innerHTML = "";
+    let time = document.getElementById('time');
+    time.innerHTML = '';
+    time.classList.remove('regular');
+    time.classList.remove('medium');
+    time.classList.remove('hard');
+    score = 0;
 }
+
+function restartBoard(){
+    // restart all gameboards
+    restart();
+    selectDifficulty();
+}
+
+/** Turn counter */
+function updateCountdown(){
+    // if a pair of cards unflip and the counter is larger than zero, count down once. 
+    if(flipped && counter > 0){
+        let seconds = counter;
+        time.innerHTML = `${seconds}`;
+        counter--;
+    }
+    // if counter reaches zero reset board
+    else if(counter === 0){
+        time.innerHTML = 'GAME OVER';
+        setTimeout(() => {
+            restartBoard(); 
+          }, 700);      
+    }
+    // if player reaches max score then display victory message
+    else if (score === 8){
+        time.innerHTML = 'COMPLETE!';
+    }
+    // else keep counting down
+    else{
+        time.innerHTML = counter;  
+    }
+}
+
 
 // easy gameplay functions
 /** Add event listener to difficulty select button */
@@ -342,53 +327,18 @@ easyDifficulty.addEventListener("click", function () {
 /** create easy gameboard */
 function createEasyBoard(){
     // add and shuffle cards
+    difficulty = "easy"
     shuffle(cards);
     addCards();
+    counter = 15;
+    let time = document.getElementById('time');
+    time.classList.add('regular');
+    time.innerHTML = 15;
     // make all easy gameboard components visible
     makeVisible('game-screen');
     makeVisible('game-board');
-    makeVisible('easyTime');
     // hide all medium and hard gameboard components 
     makeInvisible('mode-selection');
-    makeInvisible('mediumTime');
-    makeInvisible('hardTime');
-    makeInvisible('game-board2');
-    makeInvisible('game-board3');
-}
-
-/** Restart easy gameboard */
-function restartEasy(){
-    // restart counter 
-    score = 0;
-    easyCountdown.innerHTML = 15;
-    easyTime = 15;
-    // clear gameboard then add and shuffle cards
-    let gameboard = document.getElementById("game-board");
-    gameboard.innerHTML = "";
-    addCards();
-    shuffle(cards); 
-}
-
-/** Turn counter */
-function updateEasyCountdown(){
-    // if a pair of cards unflip and the counter is larger than zero, count down once. 
-    if(flipped && easyTime > 0){
-        let seconds = easyTime;
-        easyCountdown.innerHTML = `${seconds}`;
-        easyTime--;
-    }
-    // if counter reaches zero reset board
-    else if(easyTime === 0){
-        restartEasy();
-    }
-    // if player reaches max score then display victory message
-    else if (score === 8){
-        easyCountdown.innerHTML = 'LEVEL COMPLETE!';
-    }
-    // else keep counting down
-    else{
-        easyCountdown.innerHTML = easyTime;  
-    }
 }
 
 // medium gameplay functions
@@ -399,45 +349,19 @@ mediumDifficulty.addEventListener("click", function () {
 
 /** create medium gameboard */
 function createMediumBoard(){
+    // add and shuffle cards
+    difficulty = "medium"
     shuffle(cards);
-    addCards2();
-    makeVisible('game-board2');
+    addCards();
+    counter = 10
+    let time = document.getElementById('time');
+    time.classList.add('medium')
+    time.innerHTML = 10
+    // make all easy gameboard components visible
     makeVisible('game-screen');
-    makeVisible('mediumTime');
+    makeVisible('game-board');
+    // hide all medium and hard gameboard components 
     makeInvisible('mode-selection');
-    makeInvisible('easyTime');
-    makeInvisible('hardTime');
-    makeInvisible('game-board');
-    makeInvisible('game-board3');
-}
-
-/** Restart medium gameboard */
-function restartMedium(){
-    mediumScore = 0;
-    mediumCountdown.innerHTML = 10;
-    mediumTime = 10;
-    let gameboard2 = document.getElementById("game-board2");
-    gameboard2.innerHTML = "";
-    addCards2();
-    shuffle(cards);
-}
-
-/** Turn counter */
-function updateMediumCountdown(){
-    if(flipped && mediumTime > 0){
-        let seconds = mediumTime;
-        mediumCountdown.innerHTML = `${seconds}`;
-        mediumTime--;
-    }
-    else if(mediumTime === 0){
-        restartMedium();
-    }
-    else if (mediumScore === 8){
-        mediumCountdown.innerHTML = 'LEVEL COMPLETE!';
-    }
-    else{
-        mediumCountdown.innerHTML = mediumTime;
-    }
 }
 
 // hard gameplay functions
@@ -448,49 +372,20 @@ hardDifficulty.addEventListener("click", function () {
 
 /** create hard gameboard */
 function createHardBoard(){
+    // add and shuffle cards
+    difficulty = "hard";
     shuffle(cards);
-    addCards3();
-    makeVisible('game-board3');
+    addCards();
+    counter = 5
+    let time = document.getElementById('time');
+    time.classList.add('hard')
+    time.innerHTML = 5;
+    // make all easy gameboard components visible
     makeVisible('game-screen');
-    makeVisible('hardTime');
+    makeVisible('game-board');
+    // hide all medium and hard gameboard components 
     makeInvisible('mode-selection');
-    makeInvisible('mediumTime');
-    makeInvisible('easyTime');
-    makeInvisible('game-board2');
-    makeInvisible('game-board');
 }
-
-/** Restart hard gameboard */
-function restartHard(){
-    hardScore = 0;
-    hardCountdown.innerHTML = 5;
-    hardTime = 5;
-    let gameboard3 = document.getElementById("game-board3");
-    gameboard3.innerHTML = "";
-    addCards3();
-    shuffle(cards);
-     
-}
-
-/** Turn counter */
-function updateHardCountdown(){
-    if(flipped && hardTime > 0){
-        let seconds = hardTime;
-        hardCountdown.innerHTML = `${seconds}`;
-        hardTime--;
-    }
-    else if(hardTime === 0){
-        restartHard();
-    }
-    else if (hardScore === 8){
-        hardCountdown.innerHTML = 'LEVEL COMPLETE!';
-    }
-    else{
-        hardCountdown.innerHTML = hardTime;    
-    } 
-}
-
-
 
 
 
