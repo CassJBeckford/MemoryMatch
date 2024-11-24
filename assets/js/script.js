@@ -283,6 +283,7 @@ function restart() {
   time.classList.remove("medium");
   time.classList.remove("hard");
   score = 0;
+  counter = 15;
 }
 
 function restartBoard() {
