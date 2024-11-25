@@ -1,6 +1,5 @@
 // initialise global variables
 
-const board1 = document.getElementById("board1");
 const gameboard = document.getElementById("game-board");
 const easyDifficulty = document.getElementById("easy");
 const mediumDifficulty = document.getElementById("medium");
@@ -16,83 +15,83 @@ let score = 0;
 let cards = [
   {
     image: "./assets/img/cheeky.png",
-    name: "cheeky",
+    name: "cheeky"
   },
 
   {
     image: "./assets/img/cheeky.png",
-    name: "cheeky",
+    name: "cheeky"
   },
 
   {
     image: "./assets/img/excited.png",
-    name: "excited",
+    name: "excited"
   },
 
   {
     image: "./assets/img/excited.png",
-    name: "excited",
+    name: "excited"
   },
 
   {
     image: "./assets/img/flirting.png",
-    name: "flirting",
+    name: "flirting"
   },
 
   {
     image: "./assets/img/flirting.png",
-    name: "flirting",
+    name: "flirting"
   },
 
   {
     image: "./assets/img/guilty.png",
-    name: "guilty",
+    name: "guilty"
   },
 
   {
     image: "./assets/img/guilty.png",
-    name: "guilty",
+    name: "guilty"
   },
 
   {
     image: "./assets/img/nervous.png",
-    name: "nervous",
+    name: "nervous"
   },
 
   {
     image: "./assets/img/nervous.png",
-    name: "nervous",
+    name: "nervous"
   },
 
   {
     image: "./assets/img/romantic.png",
-    name: "romantic",
+    name: "romantic"
   },
 
   {
     image: "./assets/img/romantic.png",
-    name: "romantic",
+    name: "romantic"
   },
 
   {
     image: "./assets/img/shocked.png",
-    name: "shocked",
+    name: "shocked"
   },
 
   {
     image: "./assets/img/shocked.png",
-    name: "shocked",
+    name: "shocked"
   },
 
   {
     image: "./assets/img/halo.png",
-    name: "halo",
+    name: "halo"
   },
 
   {
     image: "./assets/img/halo.png",
-    name: "halo",
-  },
+    name: "halo"
+  }
 ];
 let flipped = false;
 let firstMove, secondMove;
@@ -101,7 +100,7 @@ let firstMove, secondMove;
 const menuSection = {
   frontpage: "front-page",
   instructions: "instructions",
-  modeSelection: "mode-selection",
+  modeSelection: "mode-selection"
 };
 
 // menu navigation
@@ -374,8 +373,8 @@ function createHardBoard() {
   // add and shuffle cards
   difficulty = "hard";
   restart();
-  shuffle(cards);
   addCards();
+  shuffle(cards);
   counter = 5;
   let time = document.getElementById("time");
   time.classList.add("hard");
