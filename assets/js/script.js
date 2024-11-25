@@ -108,7 +108,8 @@ function showSection(sectionId) {
   // set variable equal to all menu sections
   let sections = document.getElementById("menu-section").children;
   for (let section of sections) {
-    /** modified code from https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp */
+    /** modified code from 
+     * https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp */
     if (section.id !== sectionId) {
       // Unselected menu sections are hidden
       section.classList.add("hidden");
@@ -186,7 +187,8 @@ function addCards() {
   }
 }
 
-/** Fisher-Yates shuffle algorithm https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/ */
+/** Fisher-Yates shuffle algorithm 
+ * https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/ */
 function shuffle(array) {
   // Declare variables
   let currentIndex = array.length,
@@ -293,7 +295,9 @@ function restartBoard() {
 
 /** Turn counter */
 function updateCountdown() {
-  // if a pair of cards unflip and the counter is larger than zero, count down once.
+  // if a pair of cards unflip, 
+  // and the counter is larger than zero,
+  // count down once
   if (flipped && counter > 0) {
     let seconds = counter;
     time.innerHTML = `${seconds}`;

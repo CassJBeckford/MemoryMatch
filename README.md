@@ -128,8 +128,6 @@ This website was tested on:
 
 ### Fixed bugs 
 
-- Initially placed an array with the card images/names in a JSON file and accessed them through a promise in the js file, as a result the images only appeard in the live server. Instead I decided to place the array in the variable cards in the script file and access them from there.
-
 ## Development process
 
 - I started the program and repository by using the [gitpod template](https://github.com/Code-Institute-Org/gitpod-full-template) provided by the Code Insitute.  
