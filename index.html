@@ -1,74 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style> @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');</style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+    </style>
     <title>Memory Match</title>
-</head>
-<body>
-    <!-- Menu --> 
-<div id="menu-section">
-  <div id="front-page">
-    <h1 id="menu-title" class="fugaz-one-regular game-name">MEMORY MATCH</h1>
-    <div id="menu-buttons">
-      <button id="play" onclick="selectDifficulty()">START</button>
-      <br>
-      <button id="rules" onclick="makeRulesVisible()">HOW TO PLAY</button>
-    </div>
-  </div>
-    <!-- How to play --> 
-  <div id="instructions" class="hidden">
-    <button onclick="returnToMenu()">&lt;</button>
-    <div id="how-to-play">
-      <h1 class="fugaz-one-regular game-name title">HOW TO PLAY</h1>
-      <hr>
-      <br>
-      <p><span class="fugaz-one-regular game-name">Memory Match</span> is a game to test your memory.</p>
-      <p>Once the game has started the gameboard will feature a set amount of turns depending on the difficulty.</p>
-      <p>All cards contain a picture placed face down that will be revealed once pressed.</p>
-      <p>Each picture appears on a card exactly twice and in order to make a match you must turn over the cards with the same picture.</p>
-      <p>If you turn over a pair of cards that don't match they will both return to their face down position.</p>
-      <p>Number of turns remaining will decrease by one each time a pair of cards are mismatched.</p>
-      <br>
-      <p><span class="fugaz-one-regular regular">EASY -</span> You will have 15 turns to match all cards </p>
-      <p><span class="fugaz-one-regular medium">MEDIUM -</span> You will have 10 turns to match all cards </p>
-      <p><span class="fugaz-one-regular hard">HARD -</span> You will have 5 turns to match all cards </p>
-    </div>
-  </div>
-    <!-- Difficulty -->  
-  <div id="mode-selection" class="hidden"> 
-    <button id="back-btn" onclick="returnToMenu()">&lt;</button>
-    <div id="difficulty-section" class="row difficultySelect">
-        <h1 id="difficulty-title" class="fugaz-one-regular game-name"> SELECT DIFFICULTY </h1>
-        <div class="Enquire-1">
-          <button class="play-button" id="easy">easy</button>
+  </head>
+  <body>
+    <!-- Menu -->
+    <div id="menu-section">
+      <div id="front-page">
+        <h1 id="menu-title" class="fugaz-one-regular game-name">
+          MEMORY MATCH
+        </h1>
+        <div id="menu-buttons">
+          <button id="play" onclick="selectDifficulty()">START</button>
+          <br />
+          <button id="rules" onclick="makeRulesVisible()">HOW TO PLAY</button>
         </div>
-        <div class="Enquire-2">
-          <button class="play-button" id="medium">hard</button>
-        </div>                   
-        <div class ="Enquire-3">
-          <button class="play-button" id="hard" onclick="createHardBoard()">impossible</button>
+      </div>
+      <!-- How to play -->
+      <div id="instructions" class="hidden">
+        <button onclick="returnToMenu()">&lt;</button>
+        <div id="how-to-play">
+          <h1 class="fugaz-one-regular game-name title">HOW TO PLAY</h1>
+          <hr />
+          <br />
+          <p>
+            <span class="fugaz-one-regular game-name">Memory Match</span> is a
+            game to test your memory.
+          </p>
+          <p>
+            Once the game has started the gameboard will feature a set amount of
+            turns depending on the difficulty.
+          </p>
+          <p>
+            All cards contain a picture placed face down that will be revealed
+            once pressed.
+          </p>
+          <p>
+            Each picture appears on a card exactly twice and in order to make a
+            match you must turn over the cards with the same picture.
+          </p>
+          <p>
+            If you turn over a pair of cards that don't match they will both
+            return to their face down position.
+          </p>
+          <p>
+            Number of turns remaining will decrease by one each time a pair of
+            cards are mismatched.
+          </p>
+          <br />
+          <p>
+            <span class="fugaz-one-regular regular">EASY -</span> You will have
+            15 turns to match all cards
+          </p>
+          <p>
+            <span class="fugaz-one-regular medium">MEDIUM -</span> You will have
+            10 turns to match all cards
+          </p>
+          <p>
+            <span class="fugaz-one-regular hard">HARD -</span> You will have 5
+            turns to match all cards
+          </p>
         </div>
-     </div>
-  </div>
-  <!-- Game screen --> 
+      </div>
+      <!-- Difficulty -->
+      <div id="mode-selection" class="hidden">
+        <button id="back-btn" onclick="returnToMenu()">&lt;</button>
+        <div id="difficulty-section" class="row difficultySelect">
+          <h1 id="difficulty-title" class="fugaz-one-regular game-name">
+            SELECT DIFFICULTY
+          </h1>
+          <div class="Enquire-1">
+            <button class="play-button" id="easy">easy</button>
+          </div>
+          <div class="Enquire-2">
+            <button class="play-button" id="medium">hard</button>
+          </div>
+          <div class="Enquire-3">
+            <button class="play-button" id="hard" onclick="createHardBoard()">
+              impossible
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Game screen -->
 
-  <div id="game-screen" class="hidden">
-    <div class="game-buttons">
-      <button onclick="restartBoard()">RESTART</button>
-      <button onclick="returnToMenu()">MENU</button>
-    </div>
-    <div id="timer">
-      <p id="countdown" class="fugaz-one-regular game-name">Num turns : <span id="time"></span></p>
-    </div>
-    <div id="board1">
-      <div id="game-board">
+      <div id="game-screen" class="hidden">
+        <div class="game-buttons">
+          <button onclick="restartBoard()">RESTART</button>
+          <button onclick="returnToMenu()">MENU</button>
+        </div>
+        <div id="timer">
+          <p id="countdown" class="fugaz-one-regular game-name">
+            Num turns : <span id="time"></span>
+          </p>
+        </div>
+        <div id="board1">
+          <div id="game-board"></div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<script src="assets/js/script.js"></script>
-</body>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
