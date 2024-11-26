@@ -10,7 +10,18 @@ How many tries you have to uncover all the matches depends on the game mode chos
 
 ## Purpose 
 
-Memory Match is a way for people of all ages to have fun and challenge themselves. It's a great way for anyone to strengthen their short term memory through matching new information with previous information, while also boosting long-term memory ability.
+Memory Match is a way for people of all ages to have fun and challenge themselves. It's a great way for anyone to strengthen their short term memory through matching new information with previous information, while also boosting long-term memory ability, in an enjoyable way.
+
+## User Experience (UX)
+
+-  #### User stories: 
+
+    1. As a user, I dont want to spend loads of time learning how to play.
+    2. As a user, I want to be able to reset the game if I want to start again.
+    4. As a user, I want the game to look visiually pleasing. 
+    5. As a user, I want to be able to play this on different devices. 
+    7. As a user, I want access to different game modes depending on how I want to challenge myself.
+    8. As a user, I want to know whether i have won or lost.
 
 ## Features 
 
@@ -50,15 +61,6 @@ Memory Match is a way for people of all ages to have fun and challenge themselve
   - The player will be alerted when they have either lost on won the game.
   ![UX testing](docs/screenshots/complete.png)
   ![UX testing](docs/screenshots/game-over.png)
-## User Experience (UX)
-
--  #### User stories: 
-
-    1. As a user, I dont want to spend loads of time learning how to play.
-    2. As a user, I want to be able to reset the game if I want to start again.
-    4. As a user, I want the game to look visiually pleasing. 
-    5. As a user, I want to be able to play this on different devices. 
-    7. As a user, I want access to different game modes depending on how I want to challenge myself.
 
 ## Design
 
@@ -71,7 +73,7 @@ Memory Match is a way for people of all ages to have fun and challenge themselve
 
 #### Typography
 
-  -   The main fonts on this site are .
+  - The main fonts on this site are Oswald for regular text (with a fallback of sans-serif) and Fugaz for titles.
 
 ### Wireframes
 
@@ -102,6 +104,8 @@ All wireframes were created using [balsamiq](https://balsamiq.com/)
 
 ## Testing
 
+Thoroughly testing my project required a mix of both manual and automated testing. Manual testing was integral for ensuring all elements functioned correctly from a user level, ensuring anyone using this game is able to engage with it as intened. Automated testing allowed for me to easily rectify any mundane errors or mistakes, preventing any minute inconsitites in my code.
+
 ### DevTools
 
 Lighthouse results
@@ -126,6 +130,16 @@ JS
 ## ![Text](docs/testing/js.png)
 
 ### Further testing 
+
+| **Page**        | **Testing**                                                     | **Outcome** |
+| --------------- | :--------------------------------------------------------------:| ---:|
+|FRONT PAGE       | 'Start' button leads to difficulty select page.                 | YES|
+|FRONT PAGE       | 'How to play' button leads to instructions page                 | YES|
+|INSTRUCTIONS     | Back ('<') button takes user back to front page                 | YES|
+|DIFFICULTY SELECT| 'Easy', 'Medium' and 'Hard' buttons take user to specified board| YES|
+|DIFFICULTY SELECT| Back ('<') button takes user back to front page                 | YES|
+|GAME SCREEN      | 'Restart' button takes user back to instructions page           | YES|
+|GAME SCREEN      | 'Menu' button takes user back to front page                     | YES|
 
 This website was tested on:
 
@@ -209,7 +223,7 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 - [Favicon.io](https://fontawesome.com/) images were used for the emoji memory cards.
 - Creating cards with the flip effect taken from [W3Scool](https://www.w3schools.com/howto/howto_css_flip_card.asp)
-- General coding niggles helped by [W3School](https://www.w3schools.com/)
+- General coding tips helped by [W3School](https://www.w3schools.com/)
 - Guidance for shuffling the cards on my gamescreen taken from [geeksforgeeks](https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/)
 - Guidance on how to flip cards using js taken from [Medium](https://jefferson-cuartas.medium.com/how-to-create-a-flip-card-effect-using-javascript-767dd945210c)
 - Help with creating the timer from [SheCodes](https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript)
