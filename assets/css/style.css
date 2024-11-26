@@ -4,7 +4,7 @@
 @media screen and (min-width: 1px) and (max-width: 450px){
     /*-------------------------- Menu */
     #front-page {
-        margin-top: 100px;
+        margin-top: 50px;
     }
     #menu-title {
         text-align: center;
@@ -119,11 +119,28 @@
 /*-------------------------- medium screens */
 @media screen and (min-width: 768px){
     /*-------------------------- Menu */
+    #front-page {
+        margin-bottom: 190px;
+    }
+
     #menu-buttons button {
         margin-top: 50px;
     }
 
+    /*-------------------------- How to play */
+    #instructions {
+        margin-bottom: 500px;
+    }
+
+    #instructions button {
+        margin-top: 250px;
+    }
+
     /*-------------------------- Select difficulty */  
+    #mode-selection{
+        margin-bottom: 180px;
+    }
+
     #easy {
         padding: 40px 300px 40px 300px;
     }
@@ -150,11 +167,27 @@
 /*-------------------------- large screens */
 @media screen and (min-width: 1200px) and (max-width: 2500px){
     /*-------------------------- Menu */
+    #front-page {
+        margin-bottom: 190px;
+    }
+
     #menu-buttons button {
         margin-top: 50px;
     }
 
+    /*-------------------------- How to play */
+    #instructions {
+        margin-bottom: 500px;
+    }
+
+    #instructions button {
+        margin-top: 250px;
+    }
     /*-------------------------- Select difficulty */ 
+    #mode-selection{
+        margin-bottom: 180px;
+    }
+
     #easy {
         padding: 40px 400px 40px 400px;
     }
@@ -361,6 +394,8 @@ button:active {
 #game-board {
     display: grid;
     top: 200px;
+    align-items: center;
+    justify-items: center;
 }
 
 #time{
