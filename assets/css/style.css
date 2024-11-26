@@ -120,11 +120,11 @@
 @media screen and (min-width: 768px){
     /*-------------------------- Menu */
     #front-page {
-        margin-bottom: 190px;
+        margin-bottom: 160px;
     }
 
     #menu-buttons button {
-        margin-top: 50px;
+        margin-top: 70px;
     }
 
     /*-------------------------- How to play */
