@@ -332,6 +332,7 @@ function createEasyBoard() {
   difficulty = "easy";
   shuffle(cards);
   addCards();
+  // set counter and time
   counter = 15;
   let time = document.getElementById("time");
   time.classList.add("regular");
@@ -355,6 +356,7 @@ function createMediumBoard() {
   difficulty = "medium";
   shuffle(cards);
   addCards();
+  // set counter and time
   counter = 10;
   let time = document.getElementById("time");
   time.classList.add("medium");
@@ -379,6 +381,7 @@ function createHardBoard() {
   restart();
   addCards();
   shuffle(cards);
+  // set counter and time
   counter = 5;
   let time = document.getElementById("time");
   time.classList.add("hard");
