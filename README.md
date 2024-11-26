@@ -8,6 +8,10 @@
 Memory Match is a simple game relying on the users ability to uncover and remember the placement of cards on a gameboard that can be matched together. 
 How many tries you have to uncover all the matches depends on the game mode chosen. There are three game modes: easy; where the player has 15 trys to uncover all the matches, hard; in which the player only has 10 trys and impossible; only allowing the player 5 trys.
 
+## Purpose 
+
+Memory Match is a way for people of all ages to have fun and challenge themselves. It's a great way for anyone to strengthen their short term memory through matching new information with previous information, while also boosting long-term memory ability.
+
 ## Features 
 
 ### Menu 
@@ -43,7 +47,9 @@ How many tries you have to uncover all the matches depends on the game mode chos
   ![UX testing](docs/screenshots/easy-timer.png)
   ![UX testing](docs/screenshots/medium-timer.png)
   ![UX testing](docs/screenshots/hard-timer.png)
-
+  - The player will be alerted when they have either lost on won the game.
+  ![UX testing](docs/screenshots/complete.png)
+  ![UX testing](docs/screenshots/game-over.png)
 ## User Experience (UX)
 
 -  #### User stories: 
@@ -114,6 +120,11 @@ CSS
 
 ## ![Text](docs/testing/css.png)
 
+JS
+
+- Using [JSHint](https://jshint.com/), I found no major warnings.
+## ![Text](docs/testing/js.png)
+
 ### Further testing 
 
 This website was tested on:
@@ -127,6 +138,10 @@ This website was tested on:
 - Delays with hiding elements when navigating between screens.
 
 ### Fixed bugs 
+
+- When bringing the screen to the largest size the content jumped to top of the page where it was partiailly hidden. To adjust this I adjust my media query max-width consntraint which solved the issue.
+- Initially there were three gameboards, one for each difficulty. This caused issues such as adding too many cards to the board. To fix this I refactored my code to only have one gameboard element for all difficulties.
+- My createHardBoard() function produced double the amount of cards, to fix this I placed my reset() function within it before adding cards to the gameboard.
 
 ## Development process
 
