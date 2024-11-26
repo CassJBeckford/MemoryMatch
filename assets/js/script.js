@@ -275,7 +275,7 @@ function reset() {
 
 /** Add cards function for third board */
 function restart() {
-  // restart all gameboards
+  // clear gameboard and timer
   let gameboard = document.getElementById("game-board");
   gameboard.innerHTML = "";
   let time = document.getElementById("time");
@@ -283,12 +283,14 @@ function restart() {
   time.classList.remove("regular");
   time.classList.remove("medium");
   time.classList.remove("hard");
+  // set score and counter back to original state
   score = 0;
   counter = 15;
 }
 
 function restartBoard() {
-  // restart all gameboards
+  // restart all gameboards 
+  // take user back to difficulty select
   restart();
   selectDifficulty();
 }
@@ -303,7 +305,7 @@ function updateCountdown() {
     time.innerHTML = `${seconds}`;
     counter--;
   }
-  // if counter reaches zero reset board
+  // if counter reaches zero restart board and alert loss 
   else if (counter === 0) {
     time.innerHTML = "GAME OVER";
     setTimeout(() => {
@@ -337,10 +339,10 @@ function createEasyBoard() {
   let time = document.getElementById("time");
   time.classList.add("regular");
   time.innerHTML = 15;
-  // make all easy gameboard components visible
+  // make all gameboard components visible
   makeVisible("game-screen");
   makeVisible("game-board");
-  // hide all medium and hard gameboard components
+  // hide components
   makeInvisible("mode-selection");
 }
 
@@ -361,10 +363,10 @@ function createMediumBoard() {
   let time = document.getElementById("time");
   time.classList.add("medium");
   time.innerHTML = 10;
-  // make all easy gameboard components visible
+  // make all gameboard components visible
   makeVisible("game-screen");
   makeVisible("game-board");
-  // hide all medium and hard gameboard components
+  // hide components
   makeInvisible("mode-selection");
 }
 
@@ -386,10 +388,10 @@ function createHardBoard() {
   let time = document.getElementById("time");
   time.classList.add("hard");
   time.innerHTML = 5;
-  // make all easy gameboard components visible
+  // make all gameboard components visible
   makeVisible("game-screen");
   makeVisible("game-board");
-  // hide all medium and hard gameboard components
+  // hide components
   makeInvisible("mode-selection");
 }
 
