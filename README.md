@@ -131,15 +131,19 @@ JS
 
 ### Further testing 
 
-| **Page**        | **Testing**                                                     | **Outcome** |
-| --------------- | :--------------------------------------------------------------:| ---:|
-|FRONT PAGE       | 'Start' button leads to difficulty select page.                 | YES|
-|FRONT PAGE       | 'How to play' button leads to instructions page                 | YES|
-|INSTRUCTIONS     | Back ('<') button takes user back to front page                 | YES|
-|DIFFICULTY SELECT| 'Easy', 'Medium' and 'Hard' buttons take user to specified board| YES|
-|DIFFICULTY SELECT| Back ('<') button takes user back to front page                 | YES|
-|GAME SCREEN      | 'Restart' button takes user back to instructions page           | YES|
-|GAME SCREEN      | 'Menu' button takes user back to front page                     | YES|
+| **Page**        | **Testing**                                                      | **Outcome** |
+| --------------- | :--------------------------------------------------------------: | ---:|
+|FRONT PAGE       | 'Start' button leads to difficulty select page.                  | YES|
+|FRONT PAGE       | 'How to play' button leads to instructions page                  | YES|
+|INSTRUCTIONS     |  Back ('<') button takes user back to front page                 | YES|
+|DIFFICULTY SELECT| 'Easy', 'Medium' and 'Hard' buttons take user to specified board | YES|
+|DIFFICULTY SELECT|  Back ('<') button takes user back to front page                 | YES|
+|GAME SCREEN      | 'Restart' button takes user back to instructions page            | YES|
+|GAME SCREEN      | 'Menu' button takes user back to front page                      | YES|
+|GAME SCREEN      |  Cards flip                                                      | YES|
+|GAME SCREEN      |  Matched cards stay flipped. Mismatched cards unflip             | YES|
+|GAME SCREEN      |  Timer reads victory message when game won                       | YES|
+|GAME SCREEN      |  Timer reads fail message and screen changes                     | YES|
 
 This website was tested on:
 
