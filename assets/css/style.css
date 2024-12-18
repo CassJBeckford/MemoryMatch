@@ -60,9 +60,6 @@
 /*-------------------------- Small screens */
 @media screen and (min-width: 450px) {
     /*-------------------------- Menu */
-    #front-page {
-        
-    }
 
     #menu-title {
         text-align: center;
