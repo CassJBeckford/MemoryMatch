@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600');
 
 /*-------------------------- Extra Small screens */
-@media screen and (min-width: 1px) and (max-width: 450px){
+@media screen and (min-width: 1px){
     /*-------------------------- Menu */
     #front-page {
         margin-top: 50px;
@@ -120,7 +120,7 @@
 @media screen and (min-width: 768px){
     /*-------------------------- Menu */
     #front-page {
-        margin-bottom: 160px;
+        margin-bottom: 250px;
     }
 
     #menu-buttons button {
